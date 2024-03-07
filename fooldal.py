@@ -13,4 +13,8 @@ ablak.geometry("700x650")
 
 
 
+
+
+
+
 ablak.mainloop()
