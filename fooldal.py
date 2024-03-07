@@ -6,10 +6,11 @@ from ttkbootstrap import *
 ablak=Tk()
 ablak.resizable(False, False)
 ablak.title("Mozifalva")
-ablak.geometry("700x650")
+ablak.geometry("800x800")
 
 
-
+fogomb = Button(ablak, bootstyle="dark", text="Belépés", width=30)
+fogomb.place(x=400, y=700, anchor=CENTER)
 
 
 
