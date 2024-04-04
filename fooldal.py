@@ -5,6 +5,7 @@ from ttkbootstrap import *
 
 
 
+
 ablak=Window(themename="vapor")
 ablak.resizable(False, False)
 ablak.title("Mozifalva")
