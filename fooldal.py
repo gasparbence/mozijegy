@@ -22,6 +22,14 @@ def belepes():
     mostkep = PhotoImage(file="J:\IKT\Mozijegyfoglalo\mozijegy\mostvagysoha.png")
     mostlabel = Label(topk, image=mostkep , borderwidth=0)
     mostlabel.place(x=400, y=300, anchor=CENTER)
+    meheszkep = PhotoImage(file="J:\IKT\Mozijegyfoglalo\mozijegy\mehesz.png")
+    meheszlabel = Label(topk, image=meheszkep , borderwidth=0)
+    meheszlabel.place(x=900, y=300, anchor=CENTER)
+    godzillakep = PhotoImage(file="J:\IKT\Mozijegyfoglalo\mozijegy\godzilakong.png")
+    godzillalabel = Label(topk, image=godzillakep , borderwidth=0)
+    godzillalabel.place(x=1150, y=300, anchor=CENTER)
+    
+    
     
     dunereszletek = Button(topk, bootstyle="danger", style="danger.TButton", text="RÉSZLETEK", width=30)
     dunereszletek.place(x=650, y=500, anchor=CENTER)
