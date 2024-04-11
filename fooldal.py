@@ -24,5 +24,4 @@ fogomb.place(x=400, y=700, anchor=CENTER)
 
 
 
-
 ablak.mainloop()
