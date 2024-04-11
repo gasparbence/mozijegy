@@ -12,7 +12,7 @@ def belepes():
     topk.configure(background="black")
     filmektabla=Label(topk, text="Választható filmek:", foreground="red", font=('Ariel', 20), background="black") 
     filmektabla.place(x=400, y=100, anchor=CENTER)
-    dunekep = PhotoImage(file="dune2.png")
+    dunekep = PhotoImage(file="J:\IKT\Mozijegyfoglalo\mozijegy\dune2.png")
     dunelabel = Label(topk, image=dunekep , borderwidth=0)
     dunelabel.place(x=400, y=300, anchor=CENTER)
     
