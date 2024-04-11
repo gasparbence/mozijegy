@@ -29,8 +29,6 @@ def belepes():
     godzillalabel = Label(topk, image=godzillakep , borderwidth=0)
     godzillalabel.place(x=1150, y=300, anchor=CENTER)
     
-    
-    
     dunereszletek = Button(topk, bootstyle="danger", style="danger.TButton", text="RÉSZLETEK", width=30)
     dunereszletek.place(x=650, y=500, anchor=CENTER)
     oppenheimerreszletek = Button(topk, bootstyle="danger", style="danger.TButton", text="RÉSZLETEK", width=30)
@@ -56,8 +54,6 @@ def belepes():
     error = Button(topk, bootstyle="danger", style="danger.TButton", text="FOGLALÁS", width=15)
     error.place(x=750, y=750, anchor=LEFT)
     
-
-
 ablak=Window(themename="vapor")
 ablak.iconbitmap("kiskep.ico")
 ablak.resizable(False, False)
