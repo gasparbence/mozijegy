@@ -20,8 +20,15 @@ def reszletekoppen():
     oppenheimerlabel2.place(x=200, y=300, anchor=CENTER)
     oppenvissza = Button(topro, bootstyle="danger", style="danger.TButton", text="VISSZA", width=30, command=vissza)
     oppenvissza.place(x=500, y=600, anchor=CENTER)
-    oppentovabb = Button(topro, bootstyle="danger", style="danger.TButton", text="TOVÁBB", width=30)
+    oppentovabb = Button(topro, bootstyle="danger", style="danger.TButton", text="TOVÁBB A FOGLALÁSRA", width=30)
     oppentovabb.place(x=750, y=600, anchor=CENTER)
+    oppencim = Label(topro, text="Oppenheimer", foreground="red", font=('Ariel', 18), background="black")
+    oppencim.place(x=400, y=110)
+    oppenleiras = Label(topro, text="Bemutató ideje: 20 július 2023 , Játékidő: 181 perc, Korhatár: 16, Műfaj: Életrajzi, dráma", foreground="red", font=('Ariel', 14), background="black")
+    oppenleiras.place(x=400, y=150)
+    oppenleiras = Label(topro, text="A Christopher Nolan által írt és rendezett Oppenheimer egy IMAX-re forgatott nagyszabású thriller. \nBerepíti a nézőt abba az izgalmas paradoxonba, amit az a rejtélyes férfi élt át, aki megkockáztatta,\nhogy elpusztítja a világot, azért, hogy megmentse azt. A főszereplők Cillian Murphy mint J. Robert\nOppenheimer, és Emily Blunt mint a felesége, a biológus és botanikus Katherine “Kitty” Oppenheimer.\nAz Oscar-díjas Matt Damon alakítja Leslie Groves Jr. tábornokot, a Manhattan-terv igazgatóját, és\nRobert Downey, Jr. alakítja Lewis Strausst, az Amerikai Atomenergia Bizottság alapító biztosát. Az\nOscar-jelölt Florence Pugh játssza Jean Tatlock pszichiátert, Benny Safdie Teller Ede elméleti fizikust,\nMichael Angarano Robert Serbert, valamint Josh Hartnett alakítja az úttörő amerikai atomtudóst,\nErnest Lawrence-et. A szereplők közt találjuk még az Oscar-díjas Rami Malekot, és a rendező ismét\negyütt dolgozik a nyolcszoros Oscar-jelölt színésszel, íróval és rendezővel, Kenneth Branagh-gel. A\nfilm Kai Bird és a néhai Martin J. Sherwin Pulitzer-díjas könyve, az Amerikai Prométheus: J. Robert\nOppenheimer diadala és tragédiája alapján készült. A producerek Emma Thomas, Charles Roven és\nChristopher Nolan.", foreground="red", font=('Ariel', 14), background="black")
+    oppenleiras.place(x=400, y=190)
+    
     
 def belepes():
     global oppenheimerkep, dunekep, mostkep, meheszkep, godzillakep
