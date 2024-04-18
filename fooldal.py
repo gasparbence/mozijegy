@@ -4,7 +4,27 @@ from tkinter import messagebox
 from ttkbootstrap import *
 
 
+def vissza():
+    global topro
+    topro.destroy()
+
+def reszletekoppen():
+    global oppenheimerkep2, topro
+    topro=Toplevel()
+    topro.iconbitmap("kiskep.ico")
+    topro.geometry("1300x650")
+    topro.title("Részletek")
+    topro.configure(background="black")
+    oppenheimerkep2 = PhotoImage(file="J:\IKT\Mozijegyfoglalo\mozijegy\oppenheimernagy.png")
+    oppenheimerlabel2 = Label(topro, image=oppenheimerkep2, borderwidth=0)
+    oppenheimerlabel2.place(x=200, y=300, anchor=CENTER)
+    oppenvissza = Button(topro, bootstyle="danger", style="danger.TButton", text="VISSZA", width=30, command=vissza)
+    oppenvissza.place(x=500, y=600, anchor=CENTER)
+    oppentovabb = Button(topro, bootstyle="danger", style="danger.TButton", text="TOVÁBB", width=30)
+    oppentovabb.place(x=750, y=600, anchor=CENTER)
+    
 def belepes():
+    global oppenheimerkep, dunekep, mostkep, meheszkep, godzillakep
     topk=Toplevel()
     topk.iconbitmap("kiskep.ico")
     topk.geometry("1300x650")
@@ -31,7 +51,7 @@ def belepes():
     
     dunereszletek = Button(topk, bootstyle="danger", style="danger.TButton", text="RÉSZLETEK", width=30)
     dunereszletek.place(x=650, y=500, anchor=CENTER)
-    oppenheimerreszletek = Button(topk, bootstyle="danger", style="danger.TButton", text="RÉSZLETEK", width=30)
+    oppenheimerreszletek = Button(topk, bootstyle="danger", style="danger.TButton", text="RÉSZLETEK", width=30, command=reszletekoppen)
     oppenheimerreszletek.place(x=150, y=500, anchor=CENTER)
     mostreszletek = Button(topk, bootstyle="danger", style="danger.TButton", text="RÉSZLETEK", width=30)
     mostreszletek.place(x=400, y=500, anchor=CENTER)
@@ -51,9 +71,9 @@ def belepes():
     godzillafoglalas = Button(topk, bootstyle="danger", style="danger.TButton", text="FOGLALÁS", width=30)
     godzillafoglalas.place(x=1150, y=540, anchor=CENTER)
     
-    error = Button(topk, bootstyle="danger", style="danger.TButton", text="FOGLALÁS", width=15)
-    error.place(x=750, y=750, anchor=LEFT)
-    
+
+
+global oppenheimerkep, oppenheimerkep2, dunekep, mostkep, meheszkep, godzillakep
 ablak=Window(themename="vapor")
 ablak.iconbitmap("kiskep.ico")
 ablak.resizable(False, False)
