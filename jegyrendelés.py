@@ -3,6 +3,14 @@ from tkinter.ttk import *
 from tkinter import messagebox
 from ttkbootstrap import *
 
+
+
+#def szekek():
+#    global foglalablak
+#    szekekbtn = {}
+#    for i in range(1, 4):
+#        szekekbtn[f"szekbtn{i}"] = Button(foglalablak, bootstyle="danger", style="danger.TButton", width=10)
+
 def visszaoppen():
     global topoppen
     topoppen.destroy()
@@ -23,19 +31,31 @@ def visszagk():
     global topgk
     topgk.destroy()
 
+def foglalas():
+    global foglalablak
+    foglalablak=Toplevel()
+    foglalablak.iconbitmap("J:\IKT\Mozijegyfoglalo\kiskep.ico")
+    foglalablak.geometry("1300x650")
+    foglalablak.title("Foglalás")
+    foglalablak.resizable(False, False)
+    foglalablak.configure(background="black")
+    #szekek()
+    
+
 def reszletekoppen():
     global oppenheimerkep2, topoppen
     topoppen=Toplevel()
     topoppen.iconbitmap("J:\IKT\Mozijegyfoglalo\kiskep.ico")
     topoppen.geometry("1300x650")
     topoppen.title("Részletek")
+    topoppen.resizable(False, False)
     topoppen.configure(background="black")
     oppenheimerkep2 = PhotoImage(file="J:\IKT\Mozijegyfoglalo\mozijegy\oppenheimernagy.png")
     oppenheimerlabel = Label(topoppen, image=oppenheimerkep2, borderwidth=0)
     oppenheimerlabel.place(x=200, y=300, anchor=CENTER)
     oppenvissza = Button(topoppen, bootstyle="danger", style="danger.TButton", text="VISSZA", width=30, command=visszaoppen)
     oppenvissza.place(x=500, y=600, anchor=CENTER)
-    oppentovabb = Button(topoppen, bootstyle="danger", style="danger.TButton", text="TOVÁBB A FOGLALÁSRA", width=30)
+    oppentovabb = Button(topoppen, bootstyle="danger", style="danger.TButton", text="TOVÁBB A FOGLALÁSRA", width=30, command=foglalas)
     oppentovabb.place(x=750, y=600, anchor=CENTER)
     oppencim = Label(topoppen, text="Oppenheimer", foreground="red", font=('Ariel', 18), background="black")
     oppencim.place(x=400, y=110)
@@ -50,13 +70,14 @@ def reszletekmost():
     topmost.iconbitmap("J:\IKT\Mozijegyfoglalo\kiskep.ico")
     topmost.geometry("1300x650")
     topmost.title("Részletek")
+    topmost.resizable(False, False)
     topmost.configure(background="black")
     mostkep2 = PhotoImage(file="J:\IKT\Mozijegyfoglalo\mozijegy\mostvagysohanagy.png")
     mostlabel2 = Label(topmost, image=mostkep2, borderwidth=0)
     mostlabel2.place(x=200, y=300, anchor=CENTER)
     mostvissza = Button(topmost, bootstyle="danger", style="danger.TButton", text="VISSZA", width=30, command=visszamost)
     mostvissza.place(x=500, y=600, anchor=CENTER)
-    mosttovabb = Button(topmost, bootstyle="danger", style="danger.TButton", text="TOVÁBB A FOGLALÁSRA", width=30)
+    mosttovabb = Button(topmost, bootstyle="danger", style="danger.TButton", text="TOVÁBB A FOGLALÁSRA", width=30, command=foglalas)
     mosttovabb.place(x=750, y=600, anchor=CENTER)
     mostcim = Label(topmost, text="Most vagy soha!", foreground="red", font=('Ariel', 18), background="black")
     mostcim.place(x=400, y=110)
@@ -72,13 +93,14 @@ def reszletekdune():
     topdune.iconbitmap("J:\IKT\Mozijegyfoglalo\kiskep.ico")
     topdune.geometry("1300x650")
     topdune.title("Részletek")
+    topdune.resizable(False, False)
     topdune.configure(background="black")
     dunekep2 = PhotoImage(file="J:\IKT\Mozijegyfoglalo\mozijegy\dune2nagy.png")
     dunelabel2 = Label(topdune, image=dunekep2, borderwidth=0)
     dunelabel2.place(x=200, y=300, anchor=CENTER)
     dunevissza = Button(topdune, bootstyle="danger", style="danger.TButton", text="VISSZA", width=30, command=visszadune)
     dunevissza.place(x=500, y=600, anchor=CENTER)
-    dunetovabb = Button(topdune, bootstyle="danger", style="danger.TButton", text="TOVÁBB A FOGLALÁSRA", width=30)
+    dunetovabb = Button(topdune, bootstyle="danger", style="danger.TButton", text="TOVÁBB A FOGLALÁSRA", width=30, command=foglalas)
     dunetovabb.place(x=750, y=600, anchor=CENTER)
     dunecim = Label(topdune, text="Dűne - Második rész", foreground="red", font=('Ariel', 18), background="black")
     dunecim.place(x=400, y=110)
@@ -93,13 +115,14 @@ def reszletekmehesz():
     topmehesz.iconbitmap("J:\IKT\Mozijegyfoglalo\kiskep.ico")
     topmehesz.geometry("1300x650")
     topmehesz.title("Részletek")
+    topmehesz.resizable(False, False)
     topmehesz.configure(background="black")
     meheszkep2 = PhotoImage(file="J:\IKT\Mozijegyfoglalo\mozijegy\mehesznagy.png")
     meheszlabel = Label(topmehesz, image=meheszkep2, borderwidth=0)
     meheszlabel.place(x=200, y=300, anchor=CENTER)
     meheszvissza = Button(topmehesz, bootstyle="danger", style="danger.TButton", text="VISSZA", width=30, command=visszamehesz)
     meheszvissza.place(x=500, y=600, anchor=CENTER)
-    mehesztovabb = Button(topmehesz, bootstyle="danger", style="danger.TButton", text="TOVÁBB A FOGLALÁSRA", width=30)
+    mehesztovabb = Button(topmehesz, bootstyle="danger", style="danger.TButton", text="TOVÁBB A FOGLALÁSRA", width=30, command=foglalas)
     mehesztovabb.place(x=750, y=600, anchor=CENTER)
     meheszcim = Label(topmehesz, text="A méhész", foreground="red", font=('Ariel', 18), background="black")
     meheszcim.place(x=400, y=110)
@@ -114,13 +137,14 @@ def reszletekgk():
     topgk.iconbitmap("J:\IKT\Mozijegyfoglalo\kiskep.ico")
     topgk.geometry("1300x650")
     topgk.title("Részletek")
+    topgk.resizable(False, False)
     topgk.configure(background="black")
     gkkep2 = PhotoImage(file="J:\IKT\Mozijegyfoglalo\mozijegy\godzilakongnagy.png")
     gklabel = Label(topgk, image=gkkep2, borderwidth=0)
     gklabel.place(x=200, y=300, anchor=CENTER)
     gkvissza = Button(topgk, bootstyle="danger", style="danger.TButton", text="VISSZA", width=30, command=visszagk)
     gkvissza.place(x=500, y=600, anchor=CENTER)
-    gktovabb = Button(topgk, bootstyle="danger", style="danger.TButton", text="TOVÁBB A FOGLALÁSRA", width=30)
+    gktovabb = Button(topgk, bootstyle="danger", style="danger.TButton", text="TOVÁBB A FOGLALÁSRA", width=30, command=foglalas)
     gktovabb.place(x=750, y=600, anchor=CENTER)
     gkcim = Label(topgk, text="Godzilla x Kong: Az új birodalom", foreground="red", font=('Ariel', 18), background="black")
     gkcim.place(x=400, y=110)
@@ -172,15 +196,15 @@ def belepes():
     godzillareszletek = Button(topk, bootstyle="danger", style="danger.TButton", text="RÉSZLETEK", width=30, command=reszletekgk)
     godzillareszletek.place(x=1150, y=500, anchor=CENTER)
     
-    dunefoglalas = Button(topk, bootstyle="danger", style="danger.TButton", text="FOGLALÁS", width=30)
+    dunefoglalas = Button(topk, bootstyle="danger", style="danger.TButton", text="FOGLALÁS", width=30, command=foglalas)
     dunefoglalas.place(x=650, y=540, anchor=CENTER)
-    oppenheimerfoglalas = Button(topk, bootstyle="danger", style="danger.TButton", text="FOGLALÁS", width=30)
+    oppenheimerfoglalas = Button(topk, bootstyle="danger", style="danger.TButton", text="FOGLALÁS", width=30, command=foglalas)
     oppenheimerfoglalas.place(x=150, y=540, anchor=CENTER)
-    mostfoglalas = Button(topk, bootstyle="danger", style="danger.TButton", text="FOGLALÁS", width=30)
+    mostfoglalas = Button(topk, bootstyle="danger", style="danger.TButton", text="FOGLALÁS", width=30, command=foglalas)
     mostfoglalas.place(x=400, y=540, anchor=CENTER)
-    meheszfoglalas = Button(topk, bootstyle="danger", style="danger.TButton", text="FOGLALÁS", width=30)
+    meheszfoglalas = Button(topk, bootstyle="danger", style="danger.TButton", text="FOGLALÁS", width=30, command=foglalas)
     meheszfoglalas.place(x=900, y=540, anchor=CENTER)
-    godzillafoglalas = Button(topk, bootstyle="danger", style="danger.TButton", text="FOGLALÁS", width=30)
+    godzillafoglalas = Button(topk, bootstyle="danger", style="danger.TButton", text="FOGLALÁS", width=30, command=foglalas)
     godzillafoglalas.place(x=1150, y=540, anchor=CENTER)
     
 
