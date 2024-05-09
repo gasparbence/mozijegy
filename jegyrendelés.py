@@ -23,186 +23,172 @@ def visszagk():
     global topgk
     topgk.destroy()
     
-def btnclick():
+def visszafoglal():
+    global foglalablak
+    foglalablak.destroy()
+
+def megrendelfoglal():
+    global foglalablak
     pass
 
-def foglalas():
+def resetfoglal():
     global foglalablak
+    pass
+    
+
+def foglalas():
+    global foglalablak, kiskep
     foglalablak=Toplevel()
     foglalablak.iconbitmap("J:\IKT\Mozijegyfoglalo\kiskep.ico")
     foglalablak.geometry("1300x650")
     foglalablak.title("Foglalás")
     foglalablak.resizable(False, False)
     foglalablak.configure(background="black")
-    style1 = Style()
-    style1.configure("danger.TButton", font=("Ariel", 15))
-    style2 = Style()
-    style2.configure("TButton", font=("Ariel", 13))
-    styl3 = Style()
-    styl3.configure("TMenubutton", font=("Ariel", 11))
-    style4 = Style()
-    style4.configure("warning.TButton", font=("Ariel", 15))
-    style5 = Style()
-    style5.configure("info.TButton", font=("Ariel", 15,))
-    frame4 = Frame(foglalablak, style='My.TFrame')
-    frame4.pack()
-    frame5 = Frame(foglalablak, style='My.TFrame')
-    frame5.pack()
+    kiskep2 = Image.open("J:\IKT\Mozijegyfoglalo\mozijegy\popcorntownfinalkicsi.png")
+    kiskep2 = ImageTk.PhotoImage(kiskep2)
+    image_label = Label(foglalablak, image=kiskep) 
+    image_label.place(x=1210, y=70, anchor=CENTER)
+    foglalcim = Label(foglalablak, text="Székek foglalása:", font=("Ariel", 20), foreground="#e34b54", background="black")
+    foglalcim.place(x=600, y=100)
+    megrendel = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="MEGRENDEL", width=30, command=megrendelfoglal)
+    megrendel.place(x=1025, y=450, anchor=CENTER)
+    foglalvissza = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="VISSZA", width=30, command=visszafoglal)
+    foglalvissza.place(x=900, y=500, anchor=CENTER)
+    reset = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="RESET", width=30, command=resetfoglal)
+    reset.place(x=1150, y=500, anchor=CENTER)
 
-    label1 = Label(frame4, text='1.', font=("Ariel", 20, 'bold'), foreground='white', background='#e34b54')
-    label1.grid(row=0,column=0, padx=(10,0))
-
-    seat11 = Button(frame4, text='1', style='danger.TButton', command=lambda: btnclick(11))
-    seat11.grid(row=0, column=1, padx=(10,5), pady=10)
-
-    seat21 = Button(frame4, text='2', style='danger.TButton', command=lambda: btnclick(21))
-    seat21.grid(row=0, column=2, padx=5, pady=10)
-
-    seat31 = Button(frame4, text='3', style='danger.TButton', command=lambda: btnclick(31))
-    seat31.grid(row=0, column=3, padx=5, pady=10)
-
-    seat41 = Button(frame4, text='4', style='danger.TButton', command=lambda: btnclick(41))
-    seat41.grid(row=0, column=4, padx=(5,25), pady=10)
-
-    seat51 = Button(frame4, text='5', style='danger.TButton', command=lambda: btnclick(51))
-    seat51.grid(row=0, column=5, padx=(25,5), pady=10)
-
-    seat61 = Button(frame4, text='6', style='danger.TButton', command=lambda: btnclick(61))
-    seat61.grid(row=0, column=6, padx=5, pady=10)
-
-    seat71 = Button(frame4, text='7', style='danger.TButton', command=lambda: btnclick(71))
-    seat71.grid(row=0, column=7, padx=5, pady=10)
-
-    seat81 = Button(frame4, text='8', style='danger.TButton', command=lambda: btnclick(81))
-    seat81.grid(row=0, column=8, padx=5, pady=10)
-
-    seat91 = Button(frame4, text='9', style='danger.TButton', command=lambda: btnclick(91))
-    seat91.grid(row=0, column=9, padx=(5,10), pady=10)
-
-    label2 = Label(frame4, text='2.', font=("Ariel", 20, 'bold'), foreground='white', background='#e34b54')
-    label2.grid(row=1,column=0, padx=(10,0))
-
-    seat12 = Button(frame4, text='1', style='danger.TButton', command=lambda: btnclick(12))
-    seat12.grid(row=1, column=1, padx=(10,5))
-
-    seat22 = Button(frame4, text='2', style='danger.TButton', command=lambda: btnclick(22))
-    seat22.grid(row=1, column=2, padx=5)
-
-    seat32 = Button(frame4, text='3', style='danger.TButton', command=lambda: btnclick(32))
-    seat32.grid(row=1, column=3, padx=5)
-
-    seat42 = Button(frame4, text='4', style='danger.TButton', command=lambda: btnclick(42))
-    seat42.grid(row=1, column=4, padx=(5,25))
-
-    seat52 = Button(frame4, text='5', style='danger.TButton', command=lambda: btnclick(52))
-    seat52.grid(row=1, column=5, padx=(25,5))
-
-    seat62 = Button(frame4, text='6', style='danger.TButton', command=lambda: btnclick(62))
-    seat62.grid(row=1, column=6, padx=5)
-
-    seat72 = Button(frame4, text='7', style='danger.TButton', command=lambda: btnclick(72))
-    seat72.grid(row=1, column=7, padx=5)
-
-    seat82 = Button(frame4, text='8', style='danger.TButton', command=lambda: btnclick(82))
-    seat82.grid(row=1, column=8, padx=5)
-
-    seat92 = Button(frame4, text='9', style='danger.TButton', command=lambda: btnclick(92))
-    seat92.grid(row=1, column=9, padx=(5,10))
-
-    label3 = Label(frame4, text='3.', font=("Ariel", 20, 'bold'), foreground='white', background='#e34b54')
-    label3.grid(row=2,column=0, padx=(10,0))
-
-    seat13 = Button(frame4, text='1', style='danger.TButton', command=lambda: btnclick(13))
-    seat13.grid(row=2, column=1, padx=(10,5), pady=10)
-
-    seat23 = Button(frame4, text='2', style='danger.TButton', command=lambda: btnclick(23))
-    seat23.grid(row=2, column=2, padx=5, pady=10)
-
-    seat33 = Button(frame4, text='3', style='danger.TButton', command=lambda: btnclick(33))
-    seat33.grid(row=2, column=3, padx=5, pady=10)
-
-    seat43 = Button(frame4, text='4', style='danger.TButton', command=lambda: btnclick(43))
-    seat43.grid(row=2, column=4, padx=(5,25), pady=10)
-
-    seat53 = Button(frame4, text='5', style='danger.TButton', command=lambda: btnclick(53))
-    seat53.grid(row=2, column=5, padx=(25,5), pady=10)
-
-    seat63 = Button(frame4, text='6', style='danger.TButton', command=lambda: btnclick(63))
-    seat63.grid(row=2, column=6, padx=5, pady=10)
-
-    seat73 = Button(frame4, text='7', style='danger.TButton', command=lambda: btnclick(73))
-    seat73.grid(row=2, column=7, padx=5, pady=10)
-
-    seat83 = Button(frame4, text='8', style='danger.TButton', command=lambda: btnclick(83))
-    seat83.grid(row=2, column=8, padx=5, pady=10)
-
-    seat93 = Button(frame4, text='9', style='danger.TButton', command=lambda: btnclick(93))
-    seat93.grid(row=2, column=9, padx=(5,10), pady=10)
-
-    label4 = Label(frame4, text='4.', font=("Ariel", 20, 'bold'), foreground='white', background='#e34b54')
-    label4.grid(row=3,column=0, padx=(10,0))
-
-    seat14 = Button(frame4, text='1', style='danger.TButton', command=lambda: btnclick(14))
-    seat14.grid(row=3, column=1, padx=(10,5))
-
-    seat24 = Button(frame4, text='2', style='danger.TButton', command=lambda: btnclick(24))
-    seat24.grid(row=3, column=2, padx=5)
-
-    seat34 = Button(frame4, text='3', style='danger.TButton', command=lambda: btnclick(34))
-    seat34.grid(row=3, column=3, padx=5)
-
-    seat44 = Button(frame4, text='4', style='danger.TButton', command=lambda: btnclick(44))
-    seat44.grid(row=3, column=4, padx=(5,25))
-
-    seat54 = Button(frame4, text='5', style='danger.TButton', command=lambda: btnclick(54))
-    seat54.grid(row=3, column=5, padx=(25,5))
-
-    seat64 = Button(frame4, text='6', style='danger.TButton', command=lambda: btnclick(64))
-    seat64.grid(row=3, column=6, padx=5)
-
-    seat74 = Button(frame4, text='7', style='danger.TButton', command=lambda: btnclick(74))
-    seat74.grid(row=3, column=7, padx=5)
-
-    seat84 = Button(frame4, text='8', style='danger.TButton', command=lambda: btnclick(84))
-    seat84.grid(row=3, column=8, padx=5)
-
-    seat94 = Button(frame4, text='9', style='danger.TButton', command=lambda: btnclick(94))
-    seat94.grid(row=3, column=9, padx=(5,10))
-
-    label5 = Label(frame5, text='5.', font=("Ariel", 20, 'bold'), foreground='white', background='#e34b54')
-    label5.grid(row=0,column=0, padx=(10,0))
-
-    seat15 = Button(frame5, text='1', style='danger.TButton', command=lambda: btnclick(15))
-    seat15.grid(row=0, column=1, padx=(10,5), pady=10)
-
-    seat25 = Button(frame5, text='2', style='danger.TButton', command=lambda: btnclick(25))
-    seat25.grid(row=0, column=2, padx=5, pady=10)
-
-    seat35 = Button(frame5, text='3', style='danger.TButton', command=lambda: btnclick(35))
-    seat35.grid(row=0, column=3, padx=5, pady=10)
-
-    seat45 = Button(frame5, text='4', style='danger.TButton', command=lambda: btnclick(45))
-    seat45.grid(row=0, column=4, padx=4, pady=10)
-
-    seatblock = Button(frame5, text='+', style='danger.TButton', command=lambda: btnclick(00))
-    seatblock.grid(row=0, column=5, padx=4, pady=10)
-
-    seat55 = Button(frame5, text='5', style='danger.TButton', command=lambda: btnclick(55))
-    seat55.grid(row=0, column=6, padx=4, pady=10)
-
-    seat65 = Button(frame5, text='6', style='danger.TButton', command=lambda: btnclick(65))
-    seat65.grid(row=0, column=7, padx=5, pady=10)
-
-    seat75 = Button(frame5, text='7', style='danger.TButton', command=lambda: btnclick(75))
-    seat75.grid(row=0, column=8, padx=5, pady=10)
-
-    seat85 = Button(frame5, text='8', style='danger.TButton', command=lambda: btnclick(85))
-    seat85.grid(row=0, column=9, padx=5, pady=10)
-
-    seat95 = Button(frame5, text='9', style='danger.TButton', command=lambda: btnclick(95))
-    seat95.grid(row=0, column=10, padx=(5,10), pady=10)
-
+    sorszam1 = Label(foglalablak, text="1. sor:", font=("Ariel", 15), foreground="#e34b54", background="black")
+    sorszam1.place(x=180, y=200)
+    szek11 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="1", width=3)
+    szek11.place(x=250, y=200)
+    szek12 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="2", width=3)
+    szek12.place(x=300, y=200)
+    szek13 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="3", width=3)
+    szek13.place(x=350, y=200)
+    szek14 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="4", width=3)
+    szek14.place(x=400, y=200)
+    szek15 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="5", width=3)
+    szek15.place(x=500, y=200)
+    szek16 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="6", width=3)
+    szek16.place(x=550, y=200)
+    szek17 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="7", width=3)
+    szek17.place(x=600, y=200)
+    szek18 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="8", width=3)
+    szek18.place(x=650, y=200)
+    szek19 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="9", width=3)
+    szek19.place(x=700, y=200)
     
+    sorszam2 = Label(foglalablak, text="2. sor:", font=("Ariel", 15), foreground="#e34b54", background="black")
+    sorszam2.place(x=180, y=240)
+    szek21 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="1", width=3)
+    szek21.place(x=250, y=240)
+    szek22 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="2", width=3)
+    szek22.place(x=300, y=240)
+    szek23 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="3", width=3)
+    szek23.place(x=350, y=240)
+    szek24 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="4", width=3)
+    szek24.place(x=400, y=240)
+    szek25 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="5", width=3)
+    szek25.place(x=500, y=240)
+    szek26 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="6", width=3)
+    szek26.place(x=550, y=240)
+    szek27 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="7", width=3)
+    szek27.place(x=600, y=240)
+    szek28 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="8", width=3)
+    szek28.place(x=650, y=240)
+    szek29 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="9", width=3)
+    szek29.place(x=700, y=240)
+    
+    sorszam3 = Label(foglalablak, text="3. sor:", font=("Ariel", 15), foreground="#e34b54", background="black")
+    sorszam3.place(x=180, y=280)
+    szek31 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="1", width=3)
+    szek31.place(x=250, y=280)
+    szek32 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="2", width=3)
+    szek32.place(x=300, y=280)
+    szek33 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="3", width=3)
+    szek33.place(x=350, y=280)
+    szek34 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="4", width=3)
+    szek34.place(x=400, y=280)
+    szek35 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="5", width=3)
+    szek35.place(x=500, y=280)
+    szek36 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="6", width=3)
+    szek36.place(x=550, y=280)
+    szek37 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="7", width=3)
+    szek37.place(x=600, y=280)
+    szek38 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="8", width=3)
+    szek38.place(x=650, y=280)
+    szek39 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="9", width=3)
+    szek39.place(x=700, y=280)
+    
+    sorszam4 = Label(foglalablak, text="4. sor:", font=("Ariel", 15), foreground="#e34b54", background="black")
+    sorszam4.place(x=180, y=320)
+    szek41 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="1", width=3)
+    szek41.place(x=250, y=320)
+    szek42 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="2", width=3)
+    szek42.place(x=300, y=320)
+    szek43 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="3", width=3)
+    szek43.place(x=350, y=320)
+    szek44 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="4", width=3)
+    szek44.place(x=400, y=320)
+    szek45 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="5", width=3)
+    szek45.place(x=500, y=320)
+    szek46 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="6", width=3)
+    szek46.place(x=550, y=320)
+    szek47 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="7", width=3)
+    szek47.place(x=600, y=320)
+    szek48 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="8", width=3)
+    szek48.place(x=650, y=320)
+    szek49 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="9", width=3)
+    szek49.place(x=700, y=320)
+    
+    sorszam5 = Label(foglalablak, text="5. sor:", font=("Ariel", 15), foreground="#e34b54", background="black")
+    sorszam5.place(x=180, y=360)
+    szek51 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="1", width=3)
+    szek51.place(x=250, y=360)
+    szek52 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="2", width=3)
+    szek52.place(x=300, y=360)
+    szek53 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="3", width=3)
+    szek53.place(x=350, y=360)
+    szek54 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="4", width=3)
+    szek54.place(x=400, y=360)
+    szek55 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="5", width=3)
+    szek55.place(x=500, y=360)
+    szek56 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="6", width=3)
+    szek56.place(x=550, y=360)
+    szek57 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="7", width=3)
+    szek57.place(x=600, y=360)
+    szek58 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="8", width=3)
+    szek58.place(x=650, y=360)
+    szek59 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="9", width=3)
+    szek59.place(x=700, y=360)
+    
+    sorszam6 = Label(foglalablak, text="6. sor:", font=("Ariel", 15), foreground="#e34b54", background="black")
+    sorszam6.place(x=180, y=400)
+    szek61 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="1", width=3)
+    szek61.place(x=250, y=400)
+    szek62 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="2", width=3)
+    szek62.place(x=300, y=400)
+    szek63 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="3", width=3)
+    szek63.place(x=350, y=400)
+    szek64 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="4", width=3)
+    szek64.place(x=400, y=400)
+    szek65 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="5", width=3)
+    szek65.place(x=450, y=400)
+    szek66 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="6", width=3)
+    szek66.place(x=500, y=400)
+    szek67 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="7", width=3)
+    szek67.place(x=550, y=400)
+    szek68 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="8", width=3)
+    szek68.place(x=600, y=400)
+    szek69 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="9", width=3)
+    szek69.place(x=650, y=400)
+    szek610 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="10", width=3)
+    szek610.place(x=700, y=400)
+    
+    
+    
+    
+
 
 def reszletekoppen():
     global oppenheimerkep2, topoppen
@@ -219,11 +205,11 @@ def reszletekoppen():
     oppenvissza.place(x=500, y=600, anchor=CENTER)
     oppentovabb = Button(topoppen, bootstyle="danger", style="danger.TButton", text="TOVÁBB A FOGLALÁSRA", width=30, command=foglalas)
     oppentovabb.place(x=750, y=600, anchor=CENTER)
-    oppencim = Label(topoppen, text="Oppenheimer", foreground="red", font=('Ariel', 18), background="black")
+    oppencim = Label(topoppen, text="Oppenheimer", foreground="#e34b54", font=('Ariel', 18), background="black")
     oppencim.place(x=400, y=110)
-    oppenleiras = Label(topoppen, text="Bemutató ideje: 20 július 2023 , Játékidő: 181 perc, Korhatár: 16, Műfaj: Életrajzi, dráma", foreground="red", font=('Ariel', 14), background="black")
+    oppenleiras = Label(topoppen, text="Bemutató ideje: 20 július 2023 , Játékidő: 181 perc, Korhatár: 16, Műfaj: Életrajzi, dráma", foreground="#e34b54", font=('Ariel', 14), background="black")
     oppenleiras.place(x=400, y=150)
-    oppenszoveg = Label(topoppen, text="A Christopher Nolan által írt és rendezett Oppenheimer egy IMAX-re forgatott nagyszabású thriller. \nBerepíti a nézőt abba az izgalmas paradoxonba, amit az a rejtélyes férfi élt át, aki megkockáztatta,\nhogy elpusztítja a világot, azért, hogy megmentse azt. A főszereplők Cillian Murphy mint J. Robert\nOppenheimer, és Emily Blunt mint a felesége, a biológus és botanikus Katherine “Kitty” Oppenheimer.\nAz Oscar-díjas Matt Damon alakítja Leslie Groves Jr. tábornokot, a Manhattan-terv igazgatóját, és\nRobert Downey, Jr. alakítja Lewis Strausst, az Amerikai Atomenergia Bizottság alapító biztosát. Az\nOscar-jelölt Florence Pugh játssza Jean Tatlock pszichiátert, Benny Safdie Teller Ede elméleti fizikust,\nMichael Angarano Robert Serbert, valamint Josh Hartnett alakítja az úttörő amerikai atomtudóst,\nErnest Lawrence-et. A szereplők közt találjuk még az Oscar-díjas Rami Malekot, és a rendező ismét\negyütt dolgozik a nyolcszoros Oscar-jelölt színésszel, íróval és rendezővel, Kenneth Branagh-gel. A\nfilm Kai Bird és a néhai Martin J. Sherwin Pulitzer-díjas könyve, az Amerikai Prométheus: J. Robert\nOppenheimer diadala és tragédiája alapján készült. A producerek Emma Thomas, Charles Roven és\nChristopher Nolan.", foreground="red", font=('Ariel', 14), background="black")
+    oppenszoveg = Label(topoppen, text="A Christopher Nolan által írt és rendezett Oppenheimer egy IMAX-re forgatott nagyszabású thriller. \nBerepíti a nézőt abba az izgalmas paradoxonba, amit az a rejtélyes férfi élt át, aki megkockáztatta,\nhogy elpusztítja a világot, azért, hogy megmentse azt. A főszereplők Cillian Murphy mint J. Robert\nOppenheimer, és Emily Blunt mint a felesége, a biológus és botanikus Katherine “Kitty” Oppenheimer.\nAz Oscar-díjas Matt Damon alakítja Leslie Groves Jr. tábornokot, a Manhattan-terv igazgatóját, és\nRobert Downey, Jr. alakítja Lewis Strausst, az Amerikai Atomenergia Bizottság alapító biztosát. Az\nOscar-jelölt Florence Pugh játssza Jean Tatlock pszichiátert, Benny Safdie Teller Ede elméleti fizikust,\nMichael Angarano Robert Serbert, valamint Josh Hartnett alakítja az úttörő amerikai atomtudóst,\nErnest Lawrence-et. A szereplők közt találjuk még az Oscar-díjas Rami Malekot, és a rendező ismét\negyütt dolgozik a nyolcszoros Oscar-jelölt színésszel, íróval és rendezővel, Kenneth Branagh-gel. A\nfilm Kai Bird és a néhai Martin J. Sherwin Pulitzer-díjas könyve, az Amerikai Prométheus: J. Robert\nOppenheimer diadala és tragédiája alapján készült. A producerek Emma Thomas, Charles Roven és\nChristopher Nolan.", foreground="#e34b54", font=('Ariel', 14), background="black")
     oppenszoveg.place(x=400, y=190)
 
 def reszletekmost():
@@ -241,11 +227,11 @@ def reszletekmost():
     mostvissza.place(x=500, y=600, anchor=CENTER)
     mosttovabb = Button(topmost, bootstyle="danger", style="danger.TButton", text="TOVÁBB A FOGLALÁSRA", width=30, command=foglalas)
     mosttovabb.place(x=750, y=600, anchor=CENTER)
-    mostcim = Label(topmost, text="Most vagy soha!", foreground="red", font=('Ariel', 18), background="black")
+    mostcim = Label(topmost, text="Most vagy soha!", foreground="#e34b54", font=('Ariel', 18), background="black")
     mostcim.place(x=400, y=110)
-    mostleiras = Label(topmost, text="bemutató ideje: 14 március 2024 , játékidő: 135 perc, Korhatár: 12, Műfaj: Akció, Dráma, Történelmi film", foreground="red", font=('Ariel', 14), background="black")
+    mostleiras = Label(topmost, text="bemutató ideje: 14 március 2024 , játékidő: 135 perc, Korhatár: 12, Műfaj: Akció, Dráma, Történelmi film", foreground="#e34b54", font=('Ariel', 14), background="black")
     mostleiras.place(x=400, y=150)
-    mostszoveg = Label(topmost, text="Amikor 1848. március 15-én a lánglelkű költő, Petőfi Sándor költeményével, a Nemzeti Dallal\nkirobbantja a magyar forradalmat, az osztrák elnyomók egy titkosügynököt bíznak meg a feladattal,\nhogy állítsa meg a felkelést.", foreground="red", font=('Ariel', 14), background="black")
+    mostszoveg = Label(topmost, text="Amikor 1848. március 15-én a lánglelkű költő, Petőfi Sándor költeményével, a Nemzeti Dallal\nkirobbantja a magyar forradalmat, az osztrák elnyomók egy titkosügynököt bíznak meg a feladattal,\nhogy állítsa meg a felkelést.", foreground="#e34b54", font=('Ariel', 14), background="black")
     mostszoveg.place(x=400, y=190)
 
 
@@ -264,11 +250,11 @@ def reszletekdune():
     dunevissza.place(x=500, y=600, anchor=CENTER)
     dunetovabb = Button(topdune, bootstyle="danger", style="danger.TButton", text="TOVÁBB A FOGLALÁSRA", width=30, command=foglalas)
     dunetovabb.place(x=750, y=600, anchor=CENTER)
-    dunecim = Label(topdune, text="Dűne - Második rész", foreground="red", font=('Ariel', 18), background="black")
+    dunecim = Label(topdune, text="Dűne - Második rész", foreground="#e34b54", font=('Ariel', 18), background="black")
     dunecim.place(x=400, y=110)
-    duneleiras = Label(topdune, text="Bemutató ideje: 29 február 2024 , Játékidő: 166 perc, Korhatár: 16, Műfaj: Sci-Fi", foreground="red", font=('Ariel', 14), background="black")
+    duneleiras = Label(topdune, text="Bemutató ideje: 29 február 2024 , Játékidő: 166 perc, Korhatár: 16, Műfaj: Sci-Fi", foreground="#e34b54", font=('Ariel', 14), background="black")
     duneleiras.place(x=400, y=150)
-    duneszoveg = Label(topdune, text="A távoli jövőben, a bolygóközi királyságok korában játszódó történetben két nagyhatalmú uralkodóház\nharcol az Arrakis bolygó feletti hatalomért, mert az ismert univerzumban egyedül az itteni végtelen\nsivatagban bányászható az a fűszer, amely lehetővé teszi a csillagközi utazást. A Harkonnenek ura\nkiirtatta az Atreides családot. De Paul Atreides herceg (Timothée Chalamet) megmenekült: a\npusztaságban bujkál egy titokzatos, nomád nép, a fremenek között, ahol megismerkedik egy lánnyal,\nCsanival (Zendaya). Az a sorsa, hogy bosszút álljon a családjáért, háborúba vezesse a hozzá hű\nseregeket. Döntenie kell, hogy élete nagy szerelmét választja-e, vagy beteljesíti a végzetét. Az\nuniverzum sorsa múlik azon, hogy mit határoz: és végül olyan útra lép, amely megváltoztathatja azt a\nszörnyű jövőt, amelyet egyedül ő lát előre.", foreground="red", font=('Ariel', 14), background="black")
+    duneszoveg = Label(topdune, text="A távoli jövőben, a bolygóközi királyságok korában játszódó történetben két nagyhatalmú uralkodóház\nharcol az Arrakis bolygó feletti hatalomért, mert az ismert univerzumban egyedül az itteni végtelen\nsivatagban bányászható az a fűszer, amely lehetővé teszi a csillagközi utazást. A Harkonnenek ura\nkiirtatta az Atreides családot. De Paul Atreides herceg (Timothée Chalamet) megmenekült: a\npusztaságban bujkál egy titokzatos, nomád nép, a fremenek között, ahol megismerkedik egy lánnyal,\nCsanival (Zendaya). Az a sorsa, hogy bosszút álljon a családjáért, háborúba vezesse a hozzá hű\nseregeket. Döntenie kell, hogy élete nagy szerelmét választja-e, vagy beteljesíti a végzetét. Az\nuniverzum sorsa múlik azon, hogy mit határoz: és végül olyan útra lép, amely megváltoztathatja azt a\nszörnyű jövőt, amelyet egyedül ő lát előre.", foreground="#e34b54", font=('Ariel', 14), background="black")
     duneszoveg.place(x=400, y=190)
 
 def reszletekmehesz():
@@ -286,11 +272,11 @@ def reszletekmehesz():
     meheszvissza.place(x=500, y=600, anchor=CENTER)
     mehesztovabb = Button(topmehesz, bootstyle="danger", style="danger.TButton", text="TOVÁBB A FOGLALÁSRA", width=30, command=foglalas)
     mehesztovabb.place(x=750, y=600, anchor=CENTER)
-    meheszcim = Label(topmehesz, text="A méhész", foreground="red", font=('Ariel', 18), background="black")
+    meheszcim = Label(topmehesz, text="A méhész", foreground="#e34b54", font=('Ariel', 18), background="black")
     meheszcim.place(x=400, y=110)
-    meheszleiras = Label(topmehesz, text="Bemutató ideje: 11 január 2024 , játékidő: 105 perc, Korhatár: 16, Műfaj: Akció", foreground="red", font=('Ariel', 14), background="black")
+    meheszleiras = Label(topmehesz, text="Bemutató ideje: 11 január 2024 , játékidő: 105 perc, Korhatár: 16, Műfaj: Akció", foreground="#e34b54", font=('Ariel', 14), background="black")
     meheszleiras.place(x=400, y=150)
-    meheszszoveg = Label(topmehesz, text="Egy férfi egyszemélyes, brutális bosszúhadjáratának tétje országos szintűre nő, miután kiderül róla,\nhogy korábban a Méhészek néven ismert befolyásos és titkos szervezet ügynöke volt.", foreground="red", font=('Ariel', 14), background="black")
+    meheszszoveg = Label(topmehesz, text="Egy férfi egyszemélyes, brutális bosszúhadjáratának tétje országos szintűre nő, miután kiderül róla,\nhogy korábban a Méhészek néven ismert befolyásos és titkos szervezet ügynöke volt.", foreground="#e34b54", font=('Ariel', 14), background="black")
     meheszszoveg.place(x=400, y=190)
 
 def reszletekgk():
@@ -308,11 +294,11 @@ def reszletekgk():
     gkvissza.place(x=500, y=600, anchor=CENTER)
     gktovabb = Button(topgk, bootstyle="danger", style="danger.TButton", text="TOVÁBB A FOGLALÁSRA", width=30, command=foglalas)
     gktovabb.place(x=750, y=600, anchor=CENTER)
-    gkcim = Label(topgk, text="Godzilla x Kong: Az új birodalom", foreground="red", font=('Ariel', 18), background="black")
+    gkcim = Label(topgk, text="Godzilla x Kong: Az új birodalom", foreground="#e34b54", font=('Ariel', 18), background="black")
     gkcim.place(x=400, y=110)
-    gkleiras = Label(topgk, text="bemutató ideje: 28 március 2024 , játékidő: 115 perc, Műfaj: Kalandfilm, Fantasy", foreground="red", font=('Ariel', 14), background="black")
+    gkleiras = Label(topgk, text="bemutató ideje: 28 március 2024 , játékidő: 115 perc, Műfaj: Kalandfilm, Fantasy", foreground="#e34b54", font=('Ariel', 14), background="black")
     gkleiras.place(x=400, y=150)
-    gkszoveg = Label(topgk, text="A mindent eldöntő, minden eddiginél nagyobb háború nem ért véget azzal, hogy Kong és Godzilla\nszembetalálkozott és összemérte az erejét. Mert az ember most már kénytelen belenyugodni, hogy\nnem ő a legerősebb a földön. És nem ismeri igazán a saját világát: várja még néhány eddig rejtve\nmaradt meglepetés. Bujkál még valami a föld alatt, ami felébredt, és pusztítani akar. Az emberiség\nképtelen megállítani. Talán Kong is képtelen volna. És Godzilla is. De ha ők ketten összefognának,\nakkor esetleg megmenekülhetnének ők is és mi is…", foreground="red", font=('Ariel', 14), background="black")
+    gkszoveg = Label(topgk, text="A mindent eldöntő, minden eddiginél nagyobb háború nem ért véget azzal, hogy Kong és Godzilla\nszembetalálkozott és összemérte az erejét. Mert az ember most már kénytelen belenyugodni, hogy\nnem ő a legerősebb a földön. És nem ismeri igazán a saját világát: várja még néhány eddig rejtve\nmaradt meglepetés. Bujkál még valami a föld alatt, ami felébredt, és pusztítani akar. Az emberiség\nképtelen megállítani. Talán Kong is képtelen volna. És Godzilla is. De ha ők ketten összefognának,\nakkor esetleg megmenekülhetnének ők is és mi is…", foreground="#e34b54", font=('Ariel', 14), background="black")
     gkszoveg.place(x=400, y=190)
     
 def belepes():
@@ -323,7 +309,7 @@ def belepes():
     topk.resizable(False, False)
     topk.title("Filmek")
     topk.configure(background="black")
-    filmektabla=Label(topk, text="Választható filmek:", foreground="red", font=('Ariel', 20), background="black") 
+    filmektabla=Label(topk, text="Választható filmek:", foreground="#e34b54", font=('Ariel', 20), background="black") 
     filmektabla.place(x=650, y=100, anchor=CENTER)
 
     kiskep = Image.open("J:\IKT\Mozijegyfoglalo\mozijegy\popcorntownfinalkicsi.png")
