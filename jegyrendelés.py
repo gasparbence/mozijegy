@@ -3,14 +3,6 @@ from tkinter.ttk import *
 from tkinter import messagebox
 from ttkbootstrap import *
 
-
-
-#def szekek():
-#    global foglalablak
-#    szekekbtn = {}
-#    for i in range(1, 4):
-#        szekekbtn[f"szekbtn{i}"] = Button(foglalablak, bootstyle="danger", style="danger.TButton", width=10)
-
 def visszaoppen():
     global topoppen
     topoppen.destroy()
@@ -30,6 +22,9 @@ def visszamehesz():
 def visszagk():
     global topgk
     topgk.destroy()
+    
+def btnclick():
+    pass
 
 def foglalas():
     global foglalablak
@@ -39,7 +34,174 @@ def foglalas():
     foglalablak.title("Foglalás")
     foglalablak.resizable(False, False)
     foglalablak.configure(background="black")
-    #szekek()
+    style1 = Style()
+    style1.configure("danger.TButton", font=("Ariel", 15))
+    style2 = Style()
+    style2.configure("TButton", font=("Ariel", 13))
+    styl3 = Style()
+    styl3.configure("TMenubutton", font=("Ariel", 11))
+    style4 = Style()
+    style4.configure("warning.TButton", font=("Ariel", 15))
+    style5 = Style()
+    style5.configure("info.TButton", font=("Ariel", 15,))
+    frame4 = Frame(foglalablak, style='My.TFrame')
+    frame4.pack()
+    frame5 = Frame(foglalablak, style='My.TFrame')
+    frame5.pack()
+
+    label1 = Label(frame4, text='1.', font=("Ariel", 20, 'bold'), foreground='white', background='#e34b54')
+    label1.grid(row=0,column=0, padx=(10,0))
+
+    seat11 = Button(frame4, text='1', style='danger.TButton', command=lambda: btnclick(11))
+    seat11.grid(row=0, column=1, padx=(10,5), pady=10)
+
+    seat21 = Button(frame4, text='2', style='danger.TButton', command=lambda: btnclick(21))
+    seat21.grid(row=0, column=2, padx=5, pady=10)
+
+    seat31 = Button(frame4, text='3', style='danger.TButton', command=lambda: btnclick(31))
+    seat31.grid(row=0, column=3, padx=5, pady=10)
+
+    seat41 = Button(frame4, text='4', style='danger.TButton', command=lambda: btnclick(41))
+    seat41.grid(row=0, column=4, padx=(5,25), pady=10)
+
+    seat51 = Button(frame4, text='5', style='danger.TButton', command=lambda: btnclick(51))
+    seat51.grid(row=0, column=5, padx=(25,5), pady=10)
+
+    seat61 = Button(frame4, text='6', style='danger.TButton', command=lambda: btnclick(61))
+    seat61.grid(row=0, column=6, padx=5, pady=10)
+
+    seat71 = Button(frame4, text='7', style='danger.TButton', command=lambda: btnclick(71))
+    seat71.grid(row=0, column=7, padx=5, pady=10)
+
+    seat81 = Button(frame4, text='8', style='danger.TButton', command=lambda: btnclick(81))
+    seat81.grid(row=0, column=8, padx=5, pady=10)
+
+    seat91 = Button(frame4, text='9', style='danger.TButton', command=lambda: btnclick(91))
+    seat91.grid(row=0, column=9, padx=(5,10), pady=10)
+
+    label2 = Label(frame4, text='2.', font=("Ariel", 20, 'bold'), foreground='white', background='#e34b54')
+    label2.grid(row=1,column=0, padx=(10,0))
+
+    seat12 = Button(frame4, text='1', style='danger.TButton', command=lambda: btnclick(12))
+    seat12.grid(row=1, column=1, padx=(10,5))
+
+    seat22 = Button(frame4, text='2', style='danger.TButton', command=lambda: btnclick(22))
+    seat22.grid(row=1, column=2, padx=5)
+
+    seat32 = Button(frame4, text='3', style='danger.TButton', command=lambda: btnclick(32))
+    seat32.grid(row=1, column=3, padx=5)
+
+    seat42 = Button(frame4, text='4', style='danger.TButton', command=lambda: btnclick(42))
+    seat42.grid(row=1, column=4, padx=(5,25))
+
+    seat52 = Button(frame4, text='5', style='danger.TButton', command=lambda: btnclick(52))
+    seat52.grid(row=1, column=5, padx=(25,5))
+
+    seat62 = Button(frame4, text='6', style='danger.TButton', command=lambda: btnclick(62))
+    seat62.grid(row=1, column=6, padx=5)
+
+    seat72 = Button(frame4, text='7', style='danger.TButton', command=lambda: btnclick(72))
+    seat72.grid(row=1, column=7, padx=5)
+
+    seat82 = Button(frame4, text='8', style='danger.TButton', command=lambda: btnclick(82))
+    seat82.grid(row=1, column=8, padx=5)
+
+    seat92 = Button(frame4, text='9', style='danger.TButton', command=lambda: btnclick(92))
+    seat92.grid(row=1, column=9, padx=(5,10))
+
+    label3 = Label(frame4, text='3.', font=("Ariel", 20, 'bold'), foreground='white', background='#e34b54')
+    label3.grid(row=2,column=0, padx=(10,0))
+
+    seat13 = Button(frame4, text='1', style='danger.TButton', command=lambda: btnclick(13))
+    seat13.grid(row=2, column=1, padx=(10,5), pady=10)
+
+    seat23 = Button(frame4, text='2', style='danger.TButton', command=lambda: btnclick(23))
+    seat23.grid(row=2, column=2, padx=5, pady=10)
+
+    seat33 = Button(frame4, text='3', style='danger.TButton', command=lambda: btnclick(33))
+    seat33.grid(row=2, column=3, padx=5, pady=10)
+
+    seat43 = Button(frame4, text='4', style='danger.TButton', command=lambda: btnclick(43))
+    seat43.grid(row=2, column=4, padx=(5,25), pady=10)
+
+    seat53 = Button(frame4, text='5', style='danger.TButton', command=lambda: btnclick(53))
+    seat53.grid(row=2, column=5, padx=(25,5), pady=10)
+
+    seat63 = Button(frame4, text='6', style='danger.TButton', command=lambda: btnclick(63))
+    seat63.grid(row=2, column=6, padx=5, pady=10)
+
+    seat73 = Button(frame4, text='7', style='danger.TButton', command=lambda: btnclick(73))
+    seat73.grid(row=2, column=7, padx=5, pady=10)
+
+    seat83 = Button(frame4, text='8', style='danger.TButton', command=lambda: btnclick(83))
+    seat83.grid(row=2, column=8, padx=5, pady=10)
+
+    seat93 = Button(frame4, text='9', style='danger.TButton', command=lambda: btnclick(93))
+    seat93.grid(row=2, column=9, padx=(5,10), pady=10)
+
+    label4 = Label(frame4, text='4.', font=("Ariel", 20, 'bold'), foreground='white', background='#e34b54')
+    label4.grid(row=3,column=0, padx=(10,0))
+
+    seat14 = Button(frame4, text='1', style='danger.TButton', command=lambda: btnclick(14))
+    seat14.grid(row=3, column=1, padx=(10,5))
+
+    seat24 = Button(frame4, text='2', style='danger.TButton', command=lambda: btnclick(24))
+    seat24.grid(row=3, column=2, padx=5)
+
+    seat34 = Button(frame4, text='3', style='danger.TButton', command=lambda: btnclick(34))
+    seat34.grid(row=3, column=3, padx=5)
+
+    seat44 = Button(frame4, text='4', style='danger.TButton', command=lambda: btnclick(44))
+    seat44.grid(row=3, column=4, padx=(5,25))
+
+    seat54 = Button(frame4, text='5', style='danger.TButton', command=lambda: btnclick(54))
+    seat54.grid(row=3, column=5, padx=(25,5))
+
+    seat64 = Button(frame4, text='6', style='danger.TButton', command=lambda: btnclick(64))
+    seat64.grid(row=3, column=6, padx=5)
+
+    seat74 = Button(frame4, text='7', style='danger.TButton', command=lambda: btnclick(74))
+    seat74.grid(row=3, column=7, padx=5)
+
+    seat84 = Button(frame4, text='8', style='danger.TButton', command=lambda: btnclick(84))
+    seat84.grid(row=3, column=8, padx=5)
+
+    seat94 = Button(frame4, text='9', style='danger.TButton', command=lambda: btnclick(94))
+    seat94.grid(row=3, column=9, padx=(5,10))
+
+    label5 = Label(frame5, text='5.', font=("Ariel", 20, 'bold'), foreground='white', background='#e34b54')
+    label5.grid(row=0,column=0, padx=(10,0))
+
+    seat15 = Button(frame5, text='1', style='danger.TButton', command=lambda: btnclick(15))
+    seat15.grid(row=0, column=1, padx=(10,5), pady=10)
+
+    seat25 = Button(frame5, text='2', style='danger.TButton', command=lambda: btnclick(25))
+    seat25.grid(row=0, column=2, padx=5, pady=10)
+
+    seat35 = Button(frame5, text='3', style='danger.TButton', command=lambda: btnclick(35))
+    seat35.grid(row=0, column=3, padx=5, pady=10)
+
+    seat45 = Button(frame5, text='4', style='danger.TButton', command=lambda: btnclick(45))
+    seat45.grid(row=0, column=4, padx=4, pady=10)
+
+    seatblock = Button(frame5, text='+', style='danger.TButton', command=lambda: btnclick(00))
+    seatblock.grid(row=0, column=5, padx=4, pady=10)
+
+    seat55 = Button(frame5, text='5', style='danger.TButton', command=lambda: btnclick(55))
+    seat55.grid(row=0, column=6, padx=4, pady=10)
+
+    seat65 = Button(frame5, text='6', style='danger.TButton', command=lambda: btnclick(65))
+    seat65.grid(row=0, column=7, padx=5, pady=10)
+
+    seat75 = Button(frame5, text='7', style='danger.TButton', command=lambda: btnclick(75))
+    seat75.grid(row=0, column=8, padx=5, pady=10)
+
+    seat85 = Button(frame5, text='8', style='danger.TButton', command=lambda: btnclick(85))
+    seat85.grid(row=0, column=9, padx=5, pady=10)
+
+    seat95 = Button(frame5, text='9', style='danger.TButton', command=lambda: btnclick(95))
+    seat95.grid(row=0, column=10, padx=(5,10), pady=10)
+
     
 
 def reszletekoppen():
