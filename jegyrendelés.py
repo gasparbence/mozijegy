@@ -28,15 +28,16 @@ def visszafoglal():
     foglalablak.destroy()
 
 def megrendelfoglal():
-    global foglalablak, neventry, emailentry, nev, email
+    global foglalablak, neventry, emailentry
     nev = neventry.get()
     email = emailentry.get()
+    print(nev, email)
     
 
 def resetfoglal():
-    global foglalablak, neventry, emailentry, nev, email
-    emailentry.configure(text=" ")
-    neventry.configure(text=" ")
+    global foglalablak, neventry, emailentry
+    emailentry.configure(textvariable=" ")
+    neventry.configure(textvariable="  ")
     
     
 
