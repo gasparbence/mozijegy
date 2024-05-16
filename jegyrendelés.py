@@ -39,7 +39,6 @@ def resetfoglal():
     emailentry.configure(textvariable=" ")
     neventry.configure(textvariable="  ")
     
-    
 
 def foglalas():
     global foglalablak, kiskep, neventry, emailentry
