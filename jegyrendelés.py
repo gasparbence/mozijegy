@@ -28,16 +28,20 @@ def visszafoglal():
     foglalablak.destroy()
 
 def megrendelfoglal():
-    global foglalablak
-    pass
+    global foglalablak, neventry, emailentry, nev, email
+    nev = neventry.get()
+    email = emailentry.get()
+    
 
 def resetfoglal():
-    global foglalablak
-    pass
+    global foglalablak, neventry, emailentry, nev, email
+    emailentry.configure(text=" ")
+    neventry.configure(text=" ")
+    
     
 
 def foglalas():
-    global foglalablak, kiskep
+    global foglalablak, kiskep, neventry, emailentry
     foglalablak=Toplevel()
     foglalablak.iconbitmap("J:\IKT\Mozijegyfoglalo\kiskep.ico")
     foglalablak.geometry("1300x650")
@@ -56,6 +60,16 @@ def foglalas():
     foglalvissza.place(x=900, y=500, anchor=CENTER)
     reset = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="RESET", width=30, command=resetfoglal)
     reset.place(x=1150, y=500, anchor=CENTER)
+    emaillabel = Label(foglalablak, text="E-mail: ", font=("Ariel", 15), foreground="#e34b54", background="black")
+    emaillabel.place(x=800, y=350)
+    emailentry = Entry(foglalablak, font=("Ariel", 10), width=50, bootstyle="danger")
+    emailentry.place(x=880, y=350)
+    nevlabel = Label(foglalablak, text="Név: ", font=("Ariel", 15), foreground="#e34b54", background="black")
+    nevlabel.place(x=800, y=300)
+    neventry = Entry(foglalablak, font=("Ariel", 10), width=50, bootstyle="danger")
+    neventry.place(x=880, y=300)
+    rendadatoklabel = Label(foglalablak, text="Rendelés adatai: ", font=("Ariel", 18), foreground="#e34b54", background="black")
+    rendadatoklabel.place(x=925, y=250)
 
     sorszam1 = Label(foglalablak, text="1. sor:", font=("Ariel", 15), foreground="#e34b54", background="black")
     sorszam1.place(x=180, y=200)
