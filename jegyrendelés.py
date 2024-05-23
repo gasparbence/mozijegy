@@ -39,9 +39,14 @@ def resetfoglal():
     emailentry.configure(textvariable=" ")
     neventry.configure(textvariable="  ")
     
+def gomb():
+    global szek11
+    if szek11 :
+        szek11.configure(bootstyle="success")
 
 def foglalas():
-    global foglalablak, kiskep, neventry, emailentry
+    global foglalablak, kiskep, neventry, emailentry, szek11, szek12, szek13, szek14, szek15, szek16, szek17, szek18, szek19, szek21, szek22, szek23, szek24, szek25, szek26, szek27, szek28, szek29, szek31, szek32, szek33, szek34, szek35, szek36, szek37, szek38, szek39, szek41, szek42, szek43, szek44, szek45, szek46, szek47, szek48, szek49, szek51, szek52, szek53, szek54, szek55, szek56, szek57, szek58, szek59, szek61, szek62, szek63, szek64, szek65, szek66, szek67, szek68, szek69, szek610
+    
     foglalablak=Toplevel()
     foglalablak.iconbitmap("J:\IKT\Mozijegyfoglalo\kiskep.ico")
     foglalablak.geometry("1300x650")
@@ -73,7 +78,7 @@ def foglalas():
 
     sorszam1 = Label(foglalablak, text="1. sor:", font=("Ariel", 15), foreground="#e34b54", background="black")
     sorszam1.place(x=180, y=200)
-    szek11 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="1", width=3)
+    szek11 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="1", width=3, command=gomb)
     szek11.place(x=250, y=200)
     szek12 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="2", width=3)
     szek12.place(x=300, y=200)
