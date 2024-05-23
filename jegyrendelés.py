@@ -28,10 +28,14 @@ def visszafoglal():
     foglalablak.destroy()
 
 def megrendelfoglal():
-    global foglalablak, neventry, emailentry
+    global foglalablak, neventry, emailentry, topk
     nev = neventry.get()
     email = emailentry.get()
     print(nev, email)
+    messagebox.showinfo(title="Sikeres rendelés!", message="A jegyeket az alábbi e.mail címre elküldtük: " + email)
+    foglalablak.destroy()
+    topk.destroy()
+    
     
 
 def resetfoglal():
@@ -93,8 +97,6 @@ def resetfoglal():
     szek68.configure(bootstyle="danger")
     szek69.configure(bootstyle="danger")
     szek610.configure(bootstyle="danger")
-    
-    
     
 def gomb11():
     global szek11, ertek
@@ -704,7 +706,7 @@ def reszletekgk():
     gkszoveg.place(x=400, y=190)
     
 def belepes():
-    global oppenheimerkep, dunekep, mostkep, meheszkep, godzillakep, kiskep
+    global oppenheimerkep, dunekep, mostkep, meheszkep, godzillakep, kiskep, topk
     topk=Toplevel()
     topk.iconbitmap("J:\IKT\Mozijegyfoglalo\kiskep.ico")
     topk.geometry("1300x650")
