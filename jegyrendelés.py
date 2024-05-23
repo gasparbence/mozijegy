@@ -35,18 +35,401 @@ def megrendelfoglal():
     
 
 def resetfoglal():
-    global foglalablak, neventry, emailentry
+    global foglalablak, neventry, emailentry, szek11, szek12, szek13, szek14, szek15, szek16, szek17, szek18, szek19, szek21, szek22, szek23, szek24, szek25, szek26, szek27, szek28, szek29, szek31, szek32, szek33, szek34, szek35, szek36, szek37, szek38, szek39, szek41, szek42, szek43, szek44, szek45, szek46, szek47, szek48, szek49, szek51, szek52, szek53, szek54, szek55, szek56, szek57, szek58, szek59, szek61, szek62, szek63, szek64, szek65, szek66, szek67, szek68, szek69, szek610
     emailentry.configure(textvariable=" ")
     neventry.configure(textvariable="  ")
+    szek11.configure(bootstyle="danger")
+    szek12.configure(bootstyle="danger")
+    szek13.configure(bootstyle="danger")
+    szek14.configure(bootstyle="danger")
+    szek15.configure(bootstyle="danger")
+    szek16.configure(bootstyle="danger")
+    szek17.configure(bootstyle="danger")
+    szek18.configure(bootstyle="danger")
+    szek19.configure(bootstyle="danger")
+    szek21.configure(bootstyle="danger")
+    szek22.configure(bootstyle="danger")
+    szek23.configure(bootstyle="danger")
+    szek24.configure(bootstyle="danger")
+    szek25.configure(bootstyle="danger")
+    szek26.configure(bootstyle="danger")
+    szek27.configure(bootstyle="danger")
+    szek28.configure(bootstyle="danger")
+    szek29.configure(bootstyle="danger")
+    szek31.configure(bootstyle="danger")
+    szek32.configure(bootstyle="danger")
+    szek33.configure(bootstyle="danger")
+    szek34.configure(bootstyle="danger")
+    szek35.configure(bootstyle="danger")
+    szek36.configure(bootstyle="danger")
+    szek37.configure(bootstyle="danger")
+    szek38.configure(bootstyle="danger")
+    szek39.configure(bootstyle="danger")
+    szek41.configure(bootstyle="danger")
+    szek42.configure(bootstyle="danger")
+    szek43.configure(bootstyle="danger")
+    szek44.configure(bootstyle="danger")
+    szek45.configure(bootstyle="danger")
+    szek46.configure(bootstyle="danger")
+    szek47.configure(bootstyle="danger")
+    szek48.configure(bootstyle="danger")
+    szek49.configure(bootstyle="danger")
+    szek51.configure(bootstyle="danger")
+    szek52.configure(bootstyle="danger")
+    szek53.configure(bootstyle="danger")
+    szek54.configure(bootstyle="danger")
+    szek55.configure(bootstyle="danger")
+    szek56.configure(bootstyle="danger")
+    szek57.configure(bootstyle="danger")
+    szek58.configure(bootstyle="danger")
+    szek59.configure(bootstyle="danger")
+    szek61.configure(bootstyle="danger")
+    szek62.configure(bootstyle="danger")
+    szek63.configure(bootstyle="danger")
+    szek64.configure(bootstyle="danger")
+    szek65.configure(bootstyle="danger")
+    szek66.configure(bootstyle="danger")
+    szek67.configure(bootstyle="danger")
+    szek68.configure(bootstyle="danger")
+    szek69.configure(bootstyle="danger")
+    szek610.configure(bootstyle="danger")
     
-def gomb():
-    global szek11
-    if szek11 :
+    
+    
+def gomb11():
+    global szek11, ertek
+    ertek -= 1
+    if ertek == 0:
         szek11.configure(bootstyle="success")
+        ertek = 1
+def gomb12():
+    global szek12, ertek
+    ertek -= 1
+    if ertek == 0:
+        szek12.configure(bootstyle="success")
+        ertek = 1
+def gomb13():
+    global szek13, ertek
+    ertek -= 1
+    if ertek == 0:
+        szek13.configure(bootstyle="success")
+        ertek = 1
+def gomb14():
+    global szek14, ertek
+    ertek -= 1
+    if ertek == 0:
+        szek14.configure(bootstyle="success")
+        ertek = 1
+def gomb15():
+    global szek15, ertek
+    ertek -= 1
+    if ertek == 0:
+        szek15.configure(bootstyle="success")
+        ertek = 1
+def gomb16():
+    global szek16, ertek
+    ertek -= 1
+    if ertek == 0:
+        szek16.configure(bootstyle="success")
+        ertek = 1
+def gomb17():
+    global szek17, ertek
+    ertek -= 1
+    if ertek == 0:
+        szek17.configure(bootstyle="success")
+        ertek = 1
+def gomb18():
+    global szek18, ertek
+    ertek -= 1
+    if ertek == 0:
+        szek18.configure(bootstyle="success")
+        ertek = 1
+def gomb19():
+    global szek19, ertek
+    ertek -= 1
+    if ertek == 0:
+        szek19.configure(bootstyle="success")
+        ertek = 1
+def gomb21():
+    global szek21, ertek
+    ertek -= 1
+    if ertek == 0:
+        szek21.configure(bootstyle="success")
+        ertek = 1
+def gomb22():
+    global szek22, ertek
+    ertek -= 1
+    if ertek == 0:
+        szek22.configure(bootstyle="success")
+        ertek = 1
+def gomb23():
+    global szek23, ertek
+    ertek -= 1
+    if ertek == 0:
+        szek23.configure(bootstyle="success")
+        ertek = 1
+def gomb24():
+    global szek24, ertek
+    ertek -= 1
+    if ertek == 0:
+        szek24.configure(bootstyle="success")
+        ertek = 1
+def gomb25():
+    global szek25, ertek
+    ertek -= 1
+    if ertek == 0:
+        szek25.configure(bootstyle="success")
+        ertek = 1
+def gomb26():
+    global szek26, ertek
+    ertek -= 1
+    if ertek == 0:
+        szek26.configure(bootstyle="success")
+        ertek = 1
+def gomb27():
+    global szek27, ertek
+    ertek -= 1
+    if ertek == 0:
+        szek27.configure(bootstyle="success")
+        ertek = 1
+def gomb28():
+    global szek28, ertek
+    ertek -= 1
+    if ertek == 0:
+        szek28.configure(bootstyle="success")
+        ertek = 1
+def gomb29():
+    global szek29, ertek
+    ertek -= 1
+    if ertek == 0:
+        szek29.configure(bootstyle="success")
+        ertek = 1
+def gomb31():
+    global szek31, ertek
+    ertek -= 1
+    if ertek == 0:
+        szek31.configure(bootstyle="success")
+        ertek = 1
+def gomb32():
+    global szek32, ertek
+    ertek -= 1
+    if ertek == 0:
+        szek32.configure(bootstyle="success")
+        ertek = 1
+def gomb33():
+    global szek33, ertek
+    ertek -= 1
+    if ertek == 0:
+        szek33.configure(bootstyle="success")
+        ertek = 1
+def gomb34():
+    global szek34, ertek
+    ertek -= 1
+    if ertek == 0:
+        szek34.configure(bootstyle="success")
+        ertek = 1
+def gomb35():
+    global szek35, ertek
+    ertek -= 1
+    if ertek == 0:
+        szek35.configure(bootstyle="success")
+        ertek = 1
+def gomb36():
+    global szek36, ertek
+    ertek -= 1
+    if ertek == 0:
+        szek36.configure(bootstyle="success")
+        ertek = 1
+def gomb37():
+    global szek37, ertek
+    ertek -= 1
+    if ertek == 0:
+        szek37.configure(bootstyle="success")
+        ertek = 1
+def gomb38():
+    global szek38, ertek
+    ertek -= 1
+    if ertek == 0:
+        szek38.configure(bootstyle="success")
+        ertek = 1
+def gomb39():
+    global szek39, ertek
+    ertek -= 1
+    if ertek == 0:
+        szek39.configure(bootstyle="success")
+        ertek = 1
+def gomb41():
+    global szek41, ertek
+    ertek -= 1
+    if ertek == 0:
+        szek41.configure(bootstyle="success")
+        ertek = 1
+def gomb42():
+    global szek42, ertek
+    ertek -= 1
+    if ertek == 0:
+        szek42.configure(bootstyle="success")
+        ertek = 1
+def gomb43():
+    global szek43, ertek
+    ertek -= 1
+    if ertek == 0:
+        szek43.configure(bootstyle="success")
+        ertek = 1
+def gomb44():
+    global szek44, ertek
+    ertek -= 1
+    if ertek == 0:
+        szek44.configure(bootstyle="success")
+        ertek = 1
+def gomb45():
+    global szek45, ertek
+    ertek -= 1
+    if ertek == 0:
+        szek45.configure(bootstyle="success")
+        ertek = 1
+def gomb46():
+    global szek46, ertek
+    ertek -= 1
+    if ertek == 0:
+        szek46.configure(bootstyle="success")
+        ertek = 1
+def gomb47():
+    global szek47, ertek
+    ertek -= 1
+    if ertek == 0:
+        szek47.configure(bootstyle="success")
+        ertek = 1
+def gomb48():
+    global szek48, ertek
+    ertek -= 1
+    if ertek == 0:
+        szek48.configure(bootstyle="success")
+        ertek = 1
+def gomb49():
+    global szek49, ertek
+    ertek -= 1
+    if ertek == 0:
+        szek49.configure(bootstyle="success")
+        ertek = 1
+def gomb51():
+    global szek51, ertek
+    ertek -= 1
+    if ertek == 0:
+        szek51.configure(bootstyle="success")
+        ertek = 1
+def gomb52():
+    global szek52, ertek
+    ertek -= 1
+    if ertek == 0:
+        szek52.configure(bootstyle="success")
+        ertek = 1
+def gomb53():
+    global szek53, ertek
+    ertek -= 1
+    if ertek == 0:
+        szek53.configure(bootstyle="success")
+        ertek = 1
+def gomb54():
+    global szek54, ertek
+    ertek -= 1
+    if ertek == 0:
+        szek54.configure(bootstyle="success")
+        ertek = 1
+def gomb55():
+    global szek55, ertek
+    ertek -= 1
+    if ertek == 0:
+        szek55.configure(bootstyle="success")
+        ertek = 1
+def gomb56():
+    global szek56, ertek
+    ertek -= 1
+    if ertek == 0:
+        szek56.configure(bootstyle="success")
+        ertek = 1
+def gomb57():
+    global szek57, ertek
+    ertek -= 1
+    if ertek == 0:
+        szek57.configure(bootstyle="success")
+        ertek = 1
+def gomb58():
+    global szek58, ertek
+    ertek -= 1
+    if ertek == 0:
+        szek58.configure(bootstyle="success")
+        ertek = 1
+def gomb59():
+    global szek59, ertek
+    ertek -= 1
+    if ertek == 0:
+        szek59.configure(bootstyle="success")
+        ertek = 1
+def gomb61():
+    global szek61, ertek
+    ertek -= 1
+    if ertek == 0:
+        szek61.configure(bootstyle="success")
+        ertek = 1
+def gomb62():
+    global szek62, ertek
+    ertek -= 1
+    if ertek == 0:
+        szek62.configure(bootstyle="success")
+        ertek = 1
+def gomb63():
+    global szek63, ertek
+    ertek -= 1
+    if ertek == 0:
+        szek63.configure(bootstyle="success")
+        ertek = 1
+def gomb64():
+    global szek64, ertek
+    ertek -= 1
+    if ertek == 0:
+        szek64.configure(bootstyle="success")
+        ertek = 1
+def gomb65():
+    global szek65, ertek
+    ertek -= 1
+    if ertek == 0:
+        szek65.configure(bootstyle="success")
+        ertek = 1
+def gomb66():
+    global szek66, ertek
+    ertek -= 1
+    if ertek == 0:
+        szek66.configure(bootstyle="success")
+        ertek = 1
+def gomb67():
+    global szek67, ertek
+    ertek -= 1
+    if ertek == 0:
+        szek67.configure(bootstyle="success")
+        ertek = 1
+def gomb68():
+    global szek68, ertek
+    ertek -= 1
+    if ertek == 0:
+        szek68.configure(bootstyle="success")
+        ertek = 1
+def gomb69():
+    global szek69, ertek
+    ertek -= 1
+    if ertek == 0:
+        szek69.configure(bootstyle="success")
+        ertek = 1
+def gomb610():
+    global szek610, ertek
+    ertek -= 1
+    if ertek == 0:
+        szek610.configure(bootstyle="success")
+        ertek = 1
 
 def foglalas():
-    global foglalablak, kiskep, neventry, emailentry, szek11, szek12, szek13, szek14, szek15, szek16, szek17, szek18, szek19, szek21, szek22, szek23, szek24, szek25, szek26, szek27, szek28, szek29, szek31, szek32, szek33, szek34, szek35, szek36, szek37, szek38, szek39, szek41, szek42, szek43, szek44, szek45, szek46, szek47, szek48, szek49, szek51, szek52, szek53, szek54, szek55, szek56, szek57, szek58, szek59, szek61, szek62, szek63, szek64, szek65, szek66, szek67, szek68, szek69, szek610
-    
+    global foglalablak, kiskep, neventry, emailentry, szek11, szek12, szek13, szek14, szek15, szek16, szek17, szek18, szek19, szek21, szek22, szek23, szek24, szek25, szek26, szek27, szek28, szek29, szek31, szek32, szek33, szek34, szek35, szek36, szek37, szek38, szek39, szek41, szek42, szek43, szek44, szek45, szek46, szek47, szek48, szek49, szek51, szek52, szek53, szek54, szek55, szek56, szek57, szek58, szek59, szek61, szek62, szek63, szek64, szek65, szek66, szek67, szek68, szek69, szek610, ertek
+    ertek = 1
     foglalablak=Toplevel()
     foglalablak.iconbitmap("J:\IKT\Mozijegyfoglalo\kiskep.ico")
     foglalablak.geometry("1300x650")
@@ -78,130 +461,130 @@ def foglalas():
 
     sorszam1 = Label(foglalablak, text="1. sor:", font=("Ariel", 15), foreground="#e34b54", background="black")
     sorszam1.place(x=180, y=200)
-    szek11 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="1", width=3, command=gomb)
+    szek11 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="1", width=3, command=gomb11)
     szek11.place(x=250, y=200)
-    szek12 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="2", width=3)
+    szek12 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="2", width=3, command=gomb12)
     szek12.place(x=300, y=200)
-    szek13 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="3", width=3)
+    szek13 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="3", width=3, command=gomb13)
     szek13.place(x=350, y=200)
-    szek14 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="4", width=3)
+    szek14 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="4", width=3, command=gomb14)
     szek14.place(x=400, y=200)
-    szek15 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="5", width=3)
+    szek15 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="5", width=3, command=gomb15)
     szek15.place(x=500, y=200)
-    szek16 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="6", width=3)
+    szek16 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="6", width=3, command=gomb16)
     szek16.place(x=550, y=200)
-    szek17 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="7", width=3)
+    szek17 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="7", width=3, command=gomb17)
     szek17.place(x=600, y=200)
-    szek18 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="8", width=3)
+    szek18 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="8", width=3, command=gomb18)
     szek18.place(x=650, y=200)
-    szek19 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="9", width=3)
+    szek19 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="9", width=3, command=gomb19)
     szek19.place(x=700, y=200)
     
     sorszam2 = Label(foglalablak, text="2. sor:", font=("Ariel", 15), foreground="#e34b54", background="black")
     sorszam2.place(x=180, y=240)
-    szek21 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="1", width=3)
+    szek21 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="1", width=3, command=gomb21)
     szek21.place(x=250, y=240)
-    szek22 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="2", width=3)
+    szek22 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="2", width=3, command=gomb22)
     szek22.place(x=300, y=240)
-    szek23 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="3", width=3)
+    szek23 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="3", width=3, command=gomb23)
     szek23.place(x=350, y=240)
-    szek24 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="4", width=3)
+    szek24 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="4", width=3, command=gomb24)
     szek24.place(x=400, y=240)
-    szek25 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="5", width=3)
+    szek25 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="5", width=3, command=gomb25)
     szek25.place(x=500, y=240)
-    szek26 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="6", width=3)
+    szek26 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="6", width=3, command=gomb26)
     szek26.place(x=550, y=240)
-    szek27 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="7", width=3)
+    szek27 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="7", width=3, command=gomb27)
     szek27.place(x=600, y=240)
-    szek28 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="8", width=3)
+    szek28 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="8", width=3, command=gomb28)
     szek28.place(x=650, y=240)
-    szek29 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="9", width=3)
+    szek29 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="9", width=3, command=gomb29)
     szek29.place(x=700, y=240)
     
     sorszam3 = Label(foglalablak, text="3. sor:", font=("Ariel", 15), foreground="#e34b54", background="black")
     sorszam3.place(x=180, y=280)
-    szek31 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="1", width=3)
+    szek31 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="1", width=3, command=gomb31)
     szek31.place(x=250, y=280)
-    szek32 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="2", width=3)
+    szek32 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="2", width=3, command=gomb32)
     szek32.place(x=300, y=280)
-    szek33 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="3", width=3)
+    szek33 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="3", width=3, command=gomb33)
     szek33.place(x=350, y=280)
-    szek34 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="4", width=3)
+    szek34 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="4", width=3, command=gomb34)
     szek34.place(x=400, y=280)
-    szek35 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="5", width=3)
+    szek35 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="5", width=3, command=gomb35)
     szek35.place(x=500, y=280)
-    szek36 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="6", width=3)
+    szek36 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="6", width=3, command=gomb36)
     szek36.place(x=550, y=280)
-    szek37 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="7", width=3)
+    szek37 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="7", width=3, command=gomb37)
     szek37.place(x=600, y=280)
-    szek38 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="8", width=3)
+    szek38 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="8", width=3, command=gomb38)
     szek38.place(x=650, y=280)
-    szek39 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="9", width=3)
+    szek39 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="9", width=3, command=gomb39)
     szek39.place(x=700, y=280)
     
     sorszam4 = Label(foglalablak, text="4. sor:", font=("Ariel", 15), foreground="#e34b54", background="black")
     sorszam4.place(x=180, y=320)
-    szek41 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="1", width=3)
+    szek41 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="1", width=3, command=gomb41)
     szek41.place(x=250, y=320)
-    szek42 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="2", width=3)
+    szek42 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="2", width=3, command=gomb42)
     szek42.place(x=300, y=320)
-    szek43 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="3", width=3)
+    szek43 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="3", width=3, command=gomb43)
     szek43.place(x=350, y=320)
-    szek44 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="4", width=3)
+    szek44 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="4", width=3, command=gomb44)
     szek44.place(x=400, y=320)
-    szek45 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="5", width=3)
+    szek45 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="5", width=3, command=gomb45)
     szek45.place(x=500, y=320)
-    szek46 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="6", width=3)
+    szek46 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="6", width=3, command=gomb46)
     szek46.place(x=550, y=320)
-    szek47 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="7", width=3)
+    szek47 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="7", width=3, command=gomb47)
     szek47.place(x=600, y=320)
-    szek48 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="8", width=3)
+    szek48 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="8", width=3, command=gomb48)
     szek48.place(x=650, y=320)
-    szek49 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="9", width=3)
+    szek49 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="9", width=3, command=gomb49)
     szek49.place(x=700, y=320)
     
     sorszam5 = Label(foglalablak, text="5. sor:", font=("Ariel", 15), foreground="#e34b54", background="black")
     sorszam5.place(x=180, y=360)
-    szek51 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="1", width=3)
+    szek51 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="1", width=3, command=gomb51)
     szek51.place(x=250, y=360)
-    szek52 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="2", width=3)
+    szek52 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="2", width=3, command=gomb52)
     szek52.place(x=300, y=360)
-    szek53 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="3", width=3)
+    szek53 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="3", width=3, command=gomb53)
     szek53.place(x=350, y=360)
-    szek54 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="4", width=3)
+    szek54 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="4", width=3, command=gomb54)
     szek54.place(x=400, y=360)
-    szek55 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="5", width=3)
+    szek55 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="5", width=3, command=gomb55)
     szek55.place(x=500, y=360)
-    szek56 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="6", width=3)
+    szek56 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="6", width=3, command=gomb56)
     szek56.place(x=550, y=360)
-    szek57 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="7", width=3)
+    szek57 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="7", width=3, command=gomb57)
     szek57.place(x=600, y=360)
-    szek58 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="8", width=3)
+    szek58 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="8", width=3, command=gomb58)
     szek58.place(x=650, y=360)
-    szek59 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="9", width=3)
+    szek59 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="9", width=3, command=gomb59)
     szek59.place(x=700, y=360)
     
     sorszam6 = Label(foglalablak, text="6. sor:", font=("Ariel", 15), foreground="#e34b54", background="black")
     sorszam6.place(x=180, y=400)
-    szek61 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="1", width=3)
+    szek61 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="1", width=3, command=gomb61)
     szek61.place(x=250, y=400)
-    szek62 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="2", width=3)
+    szek62 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="2", width=3, command=gomb62)
     szek62.place(x=300, y=400)
-    szek63 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="3", width=3)
+    szek63 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="3", width=3, command=gomb63)
     szek63.place(x=350, y=400)
-    szek64 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="4", width=3)
+    szek64 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="4", width=3, command=gomb64)
     szek64.place(x=400, y=400)
-    szek65 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="5", width=3)
+    szek65 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="5", width=3, command=gomb65)
     szek65.place(x=450, y=400)
-    szek66 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="6", width=3)
+    szek66 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="6", width=3, command=gomb66)
     szek66.place(x=500, y=400)
-    szek67 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="7", width=3)
+    szek67 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="7", width=3, command=gomb67)
     szek67.place(x=550, y=400)
-    szek68 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="8", width=3)
+    szek68 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="8", width=3, command=gomb68)
     szek68.place(x=600, y=400)
-    szek69 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="9", width=3)
+    szek69 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="9", width=3, command=gomb69)
     szek69.place(x=650, y=400)
-    szek610 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="10", width=3)
+    szek610 = Button(foglalablak, bootstyle="danger", style="danger.TButton", text="10", width=3, command=gomb610)
     szek610.place(x=700, y=400)
     
     
