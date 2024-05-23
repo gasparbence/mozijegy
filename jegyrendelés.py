@@ -28,20 +28,24 @@ def visszafoglal():
     foglalablak.destroy()
 
 def megrendelfoglal():
-    global foglalablak, neventry, emailentry, topk
+    global foglalablak, neventry, emailentry, topk, szekekszama
     nev = neventry.get()
     email = emailentry.get()
     print(nev, email)
-    messagebox.showinfo(title="Sikeres rendelés!", message="A jegyeket az alábbi e.mail címre elküldtük: " + email)
-    foglalablak.destroy()
-    topk.destroy()
+    if nev == "" or email == "" or szekekszama == 0:
+        messagebox.showerror(title="Sikertelen rendelés!", message="Kérjük adjon meg egy nevet, e-mail címet és foglaljon legalább egy széket!")
+    else:
+        messagebox.showinfo(title="Sikeres rendelés!", message="A jegyeket az alábbi e-mail címre elküldtük: " + email  + " Jegyek száma: " + str(szekekszama))
+        foglalablak.destroy()
+        topk.destroy()
     
     
 
 def resetfoglal():
-    global foglalablak, neventry, emailentry, szek11, szek12, szek13, szek14, szek15, szek16, szek17, szek18, szek19, szek21, szek22, szek23, szek24, szek25, szek26, szek27, szek28, szek29, szek31, szek32, szek33, szek34, szek35, szek36, szek37, szek38, szek39, szek41, szek42, szek43, szek44, szek45, szek46, szek47, szek48, szek49, szek51, szek52, szek53, szek54, szek55, szek56, szek57, szek58, szek59, szek61, szek62, szek63, szek64, szek65, szek66, szek67, szek68, szek69, szek610
+    global foglalablak, neventry, emailentry, szek11, szek12, szek13, szek14, szek15, szek16, szek17, szek18, szek19, szek21, szek22, szek23, szek24, szek25, szek26, szek27, szek28, szek29, szek31, szek32, szek33, szek34, szek35, szek36, szek37, szek38, szek39, szek41, szek42, szek43, szek44, szek45, szek46, szek47, szek48, szek49, szek51, szek52, szek53, szek54, szek55, szek56, szek57, szek58, szek59, szek61, szek62, szek63, szek64, szek65, szek66, szek67, szek68, szek69, szek610, szekekszama
     emailentry.configure(textvariable=" ")
     neventry.configure(textvariable="  ")
+    szekekszama = 0
     szek11.configure(bootstyle="danger")
     szek12.configure(bootstyle="danger")
     szek13.configure(bootstyle="danger")
@@ -99,339 +103,395 @@ def resetfoglal():
     szek610.configure(bootstyle="danger")
     
 def gomb11():
-    global szek11, ertek
+    global szek11, ertek, szekekszama
     ertek -= 1
     if ertek == 0:
         szek11.configure(bootstyle="success")
+        szekekszama += 1
         ertek = 1
 def gomb12():
-    global szek12, ertek
+    global szek12, ertek, szekekszama
     ertek -= 1
     if ertek == 0:
         szek12.configure(bootstyle="success")
+        szekekszama += 1
         ertek = 1
 def gomb13():
-    global szek13, ertek
+    global szek13, ertek, szekekszama
     ertek -= 1
     if ertek == 0:
         szek13.configure(bootstyle="success")
+        szekekszama += 1
         ertek = 1
 def gomb14():
-    global szek14, ertek
+    global szek14, ertek, szekekszama
     ertek -= 1
     if ertek == 0:
         szek14.configure(bootstyle="success")
+        szekekszama += 1
         ertek = 1
 def gomb15():
-    global szek15, ertek
+    global szek15, ertek, szekekszama
     ertek -= 1
     if ertek == 0:
         szek15.configure(bootstyle="success")
+        szekekszama += 1
         ertek = 1
 def gomb16():
-    global szek16, ertek
+    global szek16, ertek, szekekszama
     ertek -= 1
     if ertek == 0:
         szek16.configure(bootstyle="success")
+        szekekszama += 1
         ertek = 1
 def gomb17():
-    global szek17, ertek
+    global szek17, ertek, szekekszama
     ertek -= 1
     if ertek == 0:
         szek17.configure(bootstyle="success")
+        szekekszama += 1
         ertek = 1
 def gomb18():
-    global szek18, ertek
+    global szek18, ertek, szekekszama
     ertek -= 1
     if ertek == 0:
         szek18.configure(bootstyle="success")
+        szekekszama += 1
         ertek = 1
 def gomb19():
-    global szek19, ertek
+    global szek19, ertek, szekekszama
     ertek -= 1
     if ertek == 0:
         szek19.configure(bootstyle="success")
+        szekekszama += 1
         ertek = 1
 def gomb21():
-    global szek21, ertek
+    global szek21, ertek, szekekszama
     ertek -= 1
     if ertek == 0:
         szek21.configure(bootstyle="success")
+        szekekszama += 1
         ertek = 1
 def gomb22():
-    global szek22, ertek
+    global szek22, ertek, szekekszama
     ertek -= 1
     if ertek == 0:
         szek22.configure(bootstyle="success")
+        szekekszama += 1
         ertek = 1
 def gomb23():
-    global szek23, ertek
+    global szek23, ertek, szekekszama
     ertek -= 1
     if ertek == 0:
         szek23.configure(bootstyle="success")
+        szekekszama += 1
         ertek = 1
 def gomb24():
-    global szek24, ertek
+    global szek24, ertek, szekekszama
     ertek -= 1
     if ertek == 0:
         szek24.configure(bootstyle="success")
+        szekekszama += 1
         ertek = 1
 def gomb25():
-    global szek25, ertek
+    global szek25, ertek, szekekszama
     ertek -= 1
     if ertek == 0:
         szek25.configure(bootstyle="success")
+        szekekszama += 1
         ertek = 1
 def gomb26():
-    global szek26, ertek
+    global szek26, ertek, szekekszama
     ertek -= 1
     if ertek == 0:
         szek26.configure(bootstyle="success")
+        szekekszama += 1
         ertek = 1
 def gomb27():
-    global szek27, ertek
+    global szek27, ertek, szekekszama
     ertek -= 1
     if ertek == 0:
         szek27.configure(bootstyle="success")
+        szekekszama += 1
         ertek = 1
 def gomb28():
-    global szek28, ertek
+    global szek28, ertek, szekekszama
     ertek -= 1
     if ertek == 0:
         szek28.configure(bootstyle="success")
+        szekekszama += 1
         ertek = 1
 def gomb29():
-    global szek29, ertek
+    global szek29, ertek, szekekszama
     ertek -= 1
     if ertek == 0:
         szek29.configure(bootstyle="success")
+        szekekszama += 1
         ertek = 1
 def gomb31():
-    global szek31, ertek
+    global szek31, ertek, szekekszama
     ertek -= 1
     if ertek == 0:
         szek31.configure(bootstyle="success")
+        szekekszama += 1
         ertek = 1
 def gomb32():
-    global szek32, ertek
+    global szek32, ertek, szekekszama
     ertek -= 1
     if ertek == 0:
         szek32.configure(bootstyle="success")
+        szekekszama += 1
         ertek = 1
 def gomb33():
-    global szek33, ertek
+    global szek33, ertek, szekekszama
     ertek -= 1
     if ertek == 0:
         szek33.configure(bootstyle="success")
+        szekekszama += 1
         ertek = 1
 def gomb34():
-    global szek34, ertek
+    global szek34, ertek, szekekszama
     ertek -= 1
     if ertek == 0:
         szek34.configure(bootstyle="success")
+        szekekszama += 1
         ertek = 1
 def gomb35():
-    global szek35, ertek
+    global szek35, ertek, szekekszama
     ertek -= 1
     if ertek == 0:
         szek35.configure(bootstyle="success")
+        szekekszama += 1
         ertek = 1
 def gomb36():
-    global szek36, ertek
+    global szek36, ertek, szekekszama
     ertek -= 1
     if ertek == 0:
         szek36.configure(bootstyle="success")
+        szekekszama += 1
         ertek = 1
 def gomb37():
-    global szek37, ertek
+    global szek37, ertek, szekekszama
     ertek -= 1
     if ertek == 0:
         szek37.configure(bootstyle="success")
+        szekekszama += 1
         ertek = 1
 def gomb38():
-    global szek38, ertek
+    global szek38, ertek, szekekszama
     ertek -= 1
     if ertek == 0:
         szek38.configure(bootstyle="success")
+        szekekszama += 1
         ertek = 1
 def gomb39():
-    global szek39, ertek
+    global szek39, ertek, szekekszama
     ertek -= 1
     if ertek == 0:
         szek39.configure(bootstyle="success")
+        szekekszama += 1
         ertek = 1
 def gomb41():
-    global szek41, ertek
+    global szek41, ertek, szekekszama
     ertek -= 1
     if ertek == 0:
         szek41.configure(bootstyle="success")
+        szekekszama += 1
         ertek = 1
 def gomb42():
-    global szek42, ertek
+    global szek42, ertek, szekekszama
     ertek -= 1
     if ertek == 0:
         szek42.configure(bootstyle="success")
+        szekekszama += 1
         ertek = 1
 def gomb43():
-    global szek43, ertek
+    global szek43, ertek, szekekszama
     ertek -= 1
     if ertek == 0:
         szek43.configure(bootstyle="success")
+        szekekszama += 1
         ertek = 1
 def gomb44():
-    global szek44, ertek
+    global szek44, ertek, szekekszama
     ertek -= 1
     if ertek == 0:
         szek44.configure(bootstyle="success")
+        szekekszama += 1
         ertek = 1
 def gomb45():
-    global szek45, ertek
+    global szek45, ertek, szekekszama
     ertek -= 1
     if ertek == 0:
         szek45.configure(bootstyle="success")
+        szekekszama += 1
         ertek = 1
 def gomb46():
-    global szek46, ertek
+    global szek46, ertek, szekekszama
     ertek -= 1
     if ertek == 0:
         szek46.configure(bootstyle="success")
+        szekekszama += 1
         ertek = 1
 def gomb47():
-    global szek47, ertek
+    global szek47, ertek, szekekszama
     ertek -= 1
     if ertek == 0:
         szek47.configure(bootstyle="success")
+        szekekszama += 1
         ertek = 1
 def gomb48():
-    global szek48, ertek
+    global szek48, ertek, szekekszama
     ertek -= 1
     if ertek == 0:
         szek48.configure(bootstyle="success")
+        szekekszama += 1
         ertek = 1
 def gomb49():
-    global szek49, ertek
+    global szek49, ertek, szekekszama
     ertek -= 1
     if ertek == 0:
         szek49.configure(bootstyle="success")
+        szekekszama += 1
         ertek = 1
 def gomb51():
-    global szek51, ertek
+    global szek51, ertek, szekekszama
     ertek -= 1
     if ertek == 0:
         szek51.configure(bootstyle="success")
+        szekekszama += 1
         ertek = 1
 def gomb52():
-    global szek52, ertek
+    global szek52, ertek, szekekszama
     ertek -= 1
     if ertek == 0:
         szek52.configure(bootstyle="success")
+        szekekszama += 1
         ertek = 1
 def gomb53():
-    global szek53, ertek
+    global szek53, ertek, szekekszama
     ertek -= 1
     if ertek == 0:
         szek53.configure(bootstyle="success")
+        szekekszama += 1
         ertek = 1
 def gomb54():
-    global szek54, ertek
+    global szek54, ertek, szekekszama
     ertek -= 1
     if ertek == 0:
         szek54.configure(bootstyle="success")
+        szekekszama += 1
         ertek = 1
 def gomb55():
-    global szek55, ertek
+    global szek55, ertek, szekekszama
     ertek -= 1
     if ertek == 0:
         szek55.configure(bootstyle="success")
+        szekekszama += 1
         ertek = 1
 def gomb56():
-    global szek56, ertek
+    global szek56, ertek, szekekszama
     ertek -= 1
     if ertek == 0:
         szek56.configure(bootstyle="success")
+        szekekszama += 1
         ertek = 1
 def gomb57():
-    global szek57, ertek
+    global szek57, ertek, szekekszama
     ertek -= 1
     if ertek == 0:
         szek57.configure(bootstyle="success")
+        szekekszama += 1
         ertek = 1
 def gomb58():
-    global szek58, ertek
+    global szek58, ertek, szekekszama
     ertek -= 1
     if ertek == 0:
         szek58.configure(bootstyle="success")
+        szekekszama += 1
         ertek = 1
 def gomb59():
-    global szek59, ertek
+    global szek59, ertek, szekekszama
     ertek -= 1
     if ertek == 0:
         szek59.configure(bootstyle="success")
+        szekekszama += 1
         ertek = 1
 def gomb61():
-    global szek61, ertek
+    global szek61, ertek, szekekszama
     ertek -= 1
     if ertek == 0:
         szek61.configure(bootstyle="success")
+        szekekszama += 1
         ertek = 1
 def gomb62():
-    global szek62, ertek
+    global szek62, ertek, szekekszama
     ertek -= 1
     if ertek == 0:
         szek62.configure(bootstyle="success")
+        szekekszama += 1
         ertek = 1
 def gomb63():
-    global szek63, ertek
+    global szek63, ertek, szekekszama
     ertek -= 1
     if ertek == 0:
         szek63.configure(bootstyle="success")
+        szekekszama += 1
         ertek = 1
 def gomb64():
-    global szek64, ertek
+    global szek64, ertek, szekekszama
     ertek -= 1
     if ertek == 0:
         szek64.configure(bootstyle="success")
+        szekekszama += 1
         ertek = 1
 def gomb65():
-    global szek65, ertek
+    global szek65, ertek, szekekszama
     ertek -= 1
     if ertek == 0:
         szek65.configure(bootstyle="success")
+        szekekszama += 1
         ertek = 1
 def gomb66():
-    global szek66, ertek
+    global szek66, ertek, szekekszama
     ertek -= 1
     if ertek == 0:
         szek66.configure(bootstyle="success")
+        szekekszama += 1
         ertek = 1
 def gomb67():
-    global szek67, ertek
+    global szek67, ertek, szekekszama
     ertek -= 1
     if ertek == 0:
         szek67.configure(bootstyle="success")
+        szekekszama += 1
         ertek = 1
 def gomb68():
-    global szek68, ertek
+    global szek68, ertek, szekekszama
     ertek -= 1
     if ertek == 0:
         szek68.configure(bootstyle="success")
+        szekekszama += 1
         ertek = 1
 def gomb69():
-    global szek69, ertek
+    global szek69, ertek, szekekszama
     ertek -= 1
     if ertek == 0:
         szek69.configure(bootstyle="success")
+        szekekszama += 1
         ertek = 1
 def gomb610():
-    global szek610, ertek
+    global szek610, ertek, szekekszama
     ertek -= 1
     if ertek == 0:
         szek610.configure(bootstyle="success")
+        szekekszama += 1
         ertek = 1
 
 def foglalas():
-    global foglalablak, kiskep, neventry, emailentry, szek11, szek12, szek13, szek14, szek15, szek16, szek17, szek18, szek19, szek21, szek22, szek23, szek24, szek25, szek26, szek27, szek28, szek29, szek31, szek32, szek33, szek34, szek35, szek36, szek37, szek38, szek39, szek41, szek42, szek43, szek44, szek45, szek46, szek47, szek48, szek49, szek51, szek52, szek53, szek54, szek55, szek56, szek57, szek58, szek59, szek61, szek62, szek63, szek64, szek65, szek66, szek67, szek68, szek69, szek610, ertek
+    global foglalablak, kiskep, neventry, emailentry, szek11, szek12, szek13, szek14, szek15, szek16, szek17, szek18, szek19, szek21, szek22, szek23, szek24, szek25, szek26, szek27, szek28, szek29, szek31, szek32, szek33, szek34, szek35, szek36, szek37, szek38, szek39, szek41, szek42, szek43, szek44, szek45, szek46, szek47, szek48, szek49, szek51, szek52, szek53, szek54, szek55, szek56, szek57, szek58, szek59, szek61, szek62, szek63, szek64, szek65, szek66, szek67, szek68, szek69, szek610, ertek, szekekszama
     ertek = 1
+    szekekszama = 0
     foglalablak=Toplevel()
     foglalablak.iconbitmap("J:\IKT\Mozijegyfoglalo\kiskep.ico")
     foglalablak.geometry("1300x650")
